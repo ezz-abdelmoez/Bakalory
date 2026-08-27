@@ -1,0 +1,35 @@
+[
+  {
+    "id": "unit-algorithms",
+    "slug": "algorithms",
+    "order": 1,
+    "title": "الخوارزميات",
+    "description": "المفاهيم الأساسية لحل المشكلات: مفهوم الخوارزمية، المخططات الانسيابية، وطرق الترتيب والبحث.",
+    "icon": "Workflow",
+    "color": "blue",
+    "lessonCount": 0,
+    "questionCount": 0
+  },
+  {
+    "id": "unit-python",
+    "slug": "python",
+    "order": 2,
+    "title": "البرمجة بلغة Python",
+    "description": "تعلّم أساسيات البرمجة بلغة بايثون: المتغيرات، الشروط، الحلقات، والدوال خطوة بخطوة.",
+    "icon": "Code2",
+    "color": "green",
+    "lessonCount": 0,
+    "questionCount": 0
+  },
+  {
+    "id": "unit-databases",
+    "slug": "databases",
+    "order": 3,
+    "title": "قواعد البيانات",
+    "description": "مقدمة إلى قواعد البيانات العلائقية ولغة SQL وأهم الاستعلامات الأساسية.",
+    "icon": "Database",
+    "color": "violet",
+    "lessonCount": 0,
+    "questionCount": 0
+  }
+]
