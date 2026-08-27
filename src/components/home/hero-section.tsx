@@ -55,7 +55,7 @@ export function HeroSection() {
 
       <div className="flex flex-wrap items-center justify-center gap-3">
         <Button asChild size="lg">
-          <Link href="/lessons">{data.primaryCta}</Link>
+          <Link href="/lessons/introduction-to-algorithms">{data.primaryCta}</Link>
         </Button>
         <Button asChild size="lg" variant="outline">
           <Link href="/lessons">
