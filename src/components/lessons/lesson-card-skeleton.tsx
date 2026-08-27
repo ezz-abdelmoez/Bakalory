@@ -1,0 +1,37 @@
+import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+
+export function LessonCardSkeleton() {
+  return (
+    <Card className="flex h-full flex-col">
+      <CardHeader className="gap-3">
+        <Skeleton className="h-4 w-24" />
+        <Skeleton className="h-5 w-3/4" />
+        <Skeleton className="h-4 w-full" />
+      </CardHeader>
+      <CardContent className="flex flex-wrap gap-4">
+        <Skeleton className="h-4 w-16" />
+        <Skeleton className="h-4 w-16" />
+        <Skeleton className="h-4 w-16" />
+      </CardContent>
+      <CardFooter className="mt-auto">
+        <Skeleton className="h-9 w-full" />
+      </CardFooter>
+    </Card>
+  );
+}
+
+export function LessonGridSkeleton({ count = 6 }: { count?: number }) {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {Array.from({ length: count }).map((_, index) => (
+        <LessonCardSkeleton key={index} />
+      ))}
+    </div>
+  );
+}

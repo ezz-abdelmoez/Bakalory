@@ -1,0 +1,5 @@
+# pnpm 11 build-script allowlist. `unrs-resolver` is an optional native
+# resolver used by eslint-import-resolver; its postinstall is not required
+# (the JS fallback is used), so we keep it disabled.
+allowBuilds:
+  unrs-resolver: false

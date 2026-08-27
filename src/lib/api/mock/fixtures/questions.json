@@ -1,0 +1,793 @@
+[
+  {
+    "id": "q-01-1", "lessonId": "lesson-01", "type": "single-choice",
+    "question": "ما هو التعريف الصحيح للخوارزمية؟",
+    "options": [
+      { "id": "a", "text": "مجموعة مرتبة ومنتهية من الخطوات لحل مشكلة" },
+      { "id": "b", "text": "لغة برمجة حديثة" },
+      { "id": "c", "text": "نظام إدارة قواعد البيانات" },
+      { "id": "d", "text": "برنامج جاهز للاستخدام" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "الخوارزمية هي مجموعة مرتبة ومنتهية من الخطوات الواضحة لحل مشكلة معينة.",
+    "points": 1
+  },
+  {
+    "id": "q-01-2", "lessonId": "lesson-01", "type": "single-choice",
+    "question": "أي من الخصائص التالية ليست من خصائص الخوارزمية الجيدة؟",
+    "options": [
+      { "id": "a", "text": "الوضوح" },
+      { "id": "b", "text": "التناهي" },
+      { "id": "c", "text": "العمومية" },
+      { "id": "d", "text": "الغموض" }
+    ],
+    "correctAnswers": ["d"],
+    "explanation": "الغموض يخالف خاصية الوضوح التي تتطلب أن تكون كل خطوة دقيقة لا تحتمل التأويل.",
+    "points": 1
+  },
+  {
+    "id": "q-01-3", "lessonId": "lesson-01", "type": "multiple-choice",
+    "question": "أي من الخصائص التالية يجب أن تتوفر في الخوارزمية الجيدة؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "الوضوح" },
+      { "id": "b", "text": "الترتيب" },
+      { "id": "c", "text": "التناهي" },
+      { "id": "d", "text": "العشوائية" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "الخوارزمية الجيدة واضحة ومرتبة ومنتهية وفعالة وعامة، أما العشوائية فتناقض التنظيم.",
+    "points": 1
+  },
+  {
+    "id": "q-01-4", "lessonId": "lesson-01", "type": "multiple-choice",
+    "question": "أي مما يلي يعتبر خوارزمية من الحياة اليومية؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "وصفة تحضير كعكة بخطوات مرتبة" },
+      { "id": "b", "text": "تعليمات تركيب أثاث مرقمة" },
+      { "id": "c", "text": "خطوات حساب مجموع عددين" },
+      { "id": "d", "text": "صورة لطبق طعام" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "أي مجموعة خطوات مرتبة لحل مشكلة أو تحقيق هدف تُعد خوارزمية، أما الصورة فليست خطوات.",
+    "points": 1
+  },
+  {
+    "id": "q-01-5", "lessonId": "lesson-01", "type": "true-false",
+    "question": "الخوارزمية يجب أن تنتهي بعد عدد محدود من الخطوات.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "خاصية التناهي تعني أن الخوارزمية تنتهي دائمًا بعد عدد محدود من الخطوات.",
+    "points": 1
+  },
+  {
+    "id": "q-01-6", "lessonId": "lesson-01", "type": "true-false",
+    "question": "البرنامج والخوارزمية هما الشيء نفسه تمامًا.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["false"],
+    "explanation": "الخوارزمية وصف منطقي للحل، بينما البرنامج هو ترجمتها إلى لغة برمجة يفهمها الحاسوب.",
+    "points": 1
+  },
+
+  {
+    "id": "q-02-1", "lessonId": "lesson-02", "type": "single-choice",
+    "question": "ما الشكل القياسي المستخدم لرمز البداية والنهاية في المخطط الانسيابي؟",
+    "options": [
+      { "id": "a", "text": "مستطيل" },
+      { "id": "b", "text": "بيضاوي" },
+      { "id": "c", "text": "معيّن" },
+      { "id": "d", "text": "متوازي أضلاع" }
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "رمز البداية والنهاية يُرسم بشكل بيضاوي ويكتب داخله «ابدأ» أو «توقف».",
+    "points": 1
+  },
+  {
+    "id": "q-02-2", "lessonId": "lesson-02", "type": "single-choice",
+    "question": "ما الرمز المستخدم لتمثيل عملية اتخاذ القرار في المخطط الانسيابي؟",
+    "options": [
+      { "id": "a", "text": "المعيّن" },
+      { "id": "b", "text": "المستطيل" },
+      { "id": "c", "text": "البيضاوي" },
+      { "id": "d", "text": "السهم" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "رمز القرار يُرسم بشكل معيّن ويخرج منه سهمان: نعم أو لا.",
+    "points": 1
+  },
+  {
+    "id": "q-02-3", "lessonId": "lesson-02", "type": "multiple-choice",
+    "question": "أي من الرموز التالية يُستخدم في المخطط الانسيابي؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "متوازي الأضلاع للإدخال والإخراج" },
+      { "id": "b", "text": "المستطيل للمعالجة" },
+      { "id": "c", "text": "الأسهم لاتجاه التنفيذ" },
+      { "id": "d", "text": "الدائرة الملونة للزخرفة فقط" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "الرموز القياسية تشمل البيضاوي ومتوازي الأضلاع والمستطيل والمعيّن والأسهم، ولا تُستخدم الزخرفة بلا دلالة.",
+    "points": 1
+  },
+  {
+    "id": "q-02-4", "lessonId": "lesson-02", "type": "multiple-choice",
+    "question": "ما فائدة استخدام المخطط الانسيابي؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "توضيح خطوات الحل بصريًا" },
+      { "id": "b", "text": "تسهيل اكتشاف الأخطاء" },
+      { "id": "c", "text": "تسهيل تحويل الخوارزمية إلى برنامج" },
+      { "id": "d", "text": "استبدال لغة البرمجة نهائيًا" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "المخطط يسهل الفهم وتتبع الأخطاء والتحويل للبرمجة، لكنه لا يغني عن كتابة البرنامج.",
+    "points": 1
+  },
+  {
+    "id": "q-02-5", "lessonId": "lesson-02", "type": "true-false",
+    "question": "رمز المعالجة (المستطيل) يُستخدم للعمليات الحسابية وإسناد القيم.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "المستطيل يُستخدم لعمليات المعالجة مثل الحسابات وإسناد القيم.",
+    "points": 1
+  },
+  {
+    "id": "q-02-6", "lessonId": "lesson-02", "type": "true-false",
+    "question": "يمكن أن يخرج من رمز القرار ثلاثة أسهم مختلفة.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["false"],
+    "explanation": "رمز القرار يخرج منه سهمان فقط: نعم أو لا.",
+    "points": 1
+  },
+
+  {
+    "id": "q-03-1", "lessonId": "lesson-03", "type": "single-choice",
+    "question": "ما الشرط الأساسي لاستخدام خوارزمية البحث الثنائي؟",
+    "options": [
+      { "id": "a", "text": "أن تكون المصفوفة مرتبة" },
+      { "id": "b", "text": "أن تكون المصفوفة صغيرة" },
+      { "id": "c", "text": "أن تكون العناصر أعدادًا" },
+      { "id": "d", "text": "أن تكون المصفوفة فارغة" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "البحث الثنائي يتطلب مصفوفة مرتبة لأنه يعتمد على تقسيم مجال البحث ومقارنة العنصر الأوسط.",
+    "points": 1
+  },
+  {
+    "id": "q-03-2", "lessonId": "lesson-03", "type": "single-choice",
+    "question": "في الترتيب الفقاعي، ماذا يحدث عند مقارنة عنصرين متجاورين بترتيب خاطئ؟",
+    "options": [
+      { "id": "a", "text": "يتم تبديلهما" },
+      { "id": "b", "text": "يتم حذفهما" },
+      { "id": "c", "text": "يتوقف البرنامج" },
+      { "id": "d", "text": "لا يحدث شيء" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "نبدل العنصرين إذا كانا بترتيب خاطئ، فينتقل العنصر الأكبر تدريجيًا إلى نهاية المصفوفة.",
+    "points": 1
+  },
+  {
+    "id": "q-03-3", "lessonId": "lesson-03", "type": "multiple-choice",
+    "question": "أي من الخوارزميات التالية تُستخدم للبحث في المصفوفات؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "البحث الخطي" },
+      { "id": "b", "text": "البحث الثنائي" },
+      { "id": "c", "text": "الترتيب الفقاعي" },
+      { "id": "d", "text": "البحث المتسلسل" }
+    ],
+    "correctAnswers": ["a", "b", "d"],
+    "explanation": "البحث الخطي والثنائي (والمتسلسل مرادف للخطي) خوارزميات بحث، أما الترتيب الفقاعي فهو خوارزمية ترتيب.",
+    "points": 1
+  },
+  {
+    "id": "q-03-4", "lessonId": "lesson-03", "type": "multiple-choice",
+    "question": "ما مميزات البحث الخطي؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "يعمل مع أي مصفوفة حتى لو لم تكن مرتبة" },
+      { "id": "b", "text": "سهل التنفيذ والفهم" },
+      { "id": "c", "text": "أسرع من البحث الثنائي دائمًا" },
+      { "id": "d", "text": "مناسب للمصفوفات الصغيرة" }
+    ],
+    "correctAnswers": ["a", "b", "d"],
+    "explanation": "البحث الخطي بسيط ويعمل مع أي مصفوفة، لكنه أبطأ من الثنائي مع المصفوفات الكبيرة.",
+    "points": 1
+  },
+  {
+    "id": "q-03-5", "lessonId": "lesson-03", "type": "true-false",
+    "question": "البحث الثنائي يقسم مجال البحث إلى نصفين في كل خطوة.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "هذه هي الفكرة الأساسية للبحث الثنائي: تقليص مجال البحث إلى النصف في كل خطوة.",
+    "points": 1
+  },
+  {
+    "id": "q-03-6", "lessonId": "lesson-03", "type": "true-false",
+    "question": "الترتيب الفقاعي هو أسرع خوارزمية ترتيب للمصفوفات الكبيرة.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["false"],
+    "explanation": "الترتيب الفقاعي بسيط لكنه بطيء مع المصفوفات الكبيرة مقارنة بخوارزميات أخرى.",
+    "points": 1
+  },
+  {
+    "id": "q-03-7", "lessonId": "lesson-03", "type": "single-choice",
+    "question": "عند البحث عن العدد 16 في المصفوفة [2, 5, 8, 12, 16, 23, 38] بالبحث الثنائي، ما أول عنصر يُقارن به؟",
+    "options": [
+      { "id": "a", "text": "12" },
+      { "id": "b", "text": "2" },
+      { "id": "c", "text": "38" },
+      { "id": "d", "text": "16" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "العنصر الأوسط للمصفوفة المكونة من 7 عناصر هو العنصر الرابع وهو 12، فيبدأ البحث به.",
+    "points": 1
+  },
+
+  {
+    "id": "q-04-1", "lessonId": "lesson-04", "type": "single-choice",
+    "question": "ما ناتج العملية 7 // 2 في لغة Python؟",
+    "options": [
+      { "id": "a", "text": "3.5" },
+      { "id": "b", "text": "3" },
+      { "id": "c", "text": "1" },
+      { "id": "d", "text": "14" }
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "العامل // ينفذ القسمة الصحيحة فيرجع الجزء الصحيح من الناتج: 7 // 2 = 3.",
+    "points": 1
+  },
+  {
+    "id": "q-04-2", "lessonId": "lesson-04", "type": "single-choice",
+    "question": "ما نوع القيمة الناتجة عن التعبير 16.5 في Python؟",
+    "options": [
+      { "id": "a", "text": "int" },
+      { "id": "b", "text": "float" },
+      { "id": "c", "text": "str" },
+      { "id": "d", "text": "bool" }
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "الأعداد التي تحتوي على فاصلة عشرية من النوع float.",
+    "points": 1
+  },
+  {
+    "id": "q-04-3", "lessonId": "lesson-04", "type": "multiple-choice",
+    "question": "أي من القيم التالية من النوع الصحيح int؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "17" },
+      { "id": "b", "text": "-5" },
+      { "id": "c", "text": "3.14" },
+      { "id": "d", "text": "0" }
+    ],
+    "correctAnswers": ["a", "b", "d"],
+    "explanation": "الأعداد الصحيحة تشمل الموجب والسالب والصفر، أما 3.14 فهي عدد عشري float.",
+    "points": 1
+  },
+  {
+    "id": "q-04-4", "lessonId": "lesson-04", "type": "multiple-choice",
+    "question": "أي مما يلي من أنواع البيانات الأساسية في Python؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "int" },
+      { "id": "b", "text": "str" },
+      { "id": "c", "text": "bool" },
+      { "id": "d", "text": "table" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "الأنواع الأساسية تشمل int و float و str و bool، أما table فليس نوعًا أساسيًا في Python.",
+    "points": 1
+  },
+  {
+    "id": "q-04-5", "lessonId": "lesson-04", "type": "true-false",
+    "question": "ناتج العملية 2 ** 3 يساوي 8.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "العامل ** يحسب الأس: 2 مرفوعًا للقوة 3 = 2 × 2 × 2 = 8.",
+    "points": 1
+  },
+  {
+    "id": "q-04-6", "lessonId": "lesson-04", "type": "true-false",
+    "question": "الدالة input() ترجع دائمًا قيمة من النوع int.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["false"],
+    "explanation": "الدالة input() ترجع نصًا (str) دائمًا، وإذا أردنا عددًا نستخدم int() للتحويل.",
+    "points": 1
+  },
+  {
+    "id": "q-04-7", "lessonId": "lesson-04", "type": "single-choice",
+    "question": "ما ناتج العملية 7 % 2 في Python؟",
+    "options": [
+      { "id": "a", "text": "3" },
+      { "id": "b", "text": "1" },
+      { "id": "c", "text": "3.5" },
+      { "id": "d", "text": "0" }
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "العامل % يرجع باقي القسمة: 7 ÷ 2 = 3 والباقي 1.",
+    "points": 1
+  },
+  {
+    "id": "q-04-8", "lessonId": "lesson-04", "type": "single-choice",
+    "question": "أي جملة صحيحة لطباعة النص «مرحبًا» في Python؟",
+    "options": [
+      { "id": "a", "text": "print(\"مرحبًا\")" },
+      { "id": "b", "text": "echo \"مرحبًا\"" },
+      { "id": "c", "text": "write(\"مرحبًا\")" },
+      { "id": "d", "text": "console.log(\"مرحبًا\")" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "نستخدم الدالة print() لطباعة القيم في Python.",
+    "points": 1
+  },
+
+  {
+    "id": "q-05-1", "lessonId": "lesson-05", "type": "single-choice",
+    "question": "ما الكلمة المفتاحية المستخدمة لفحص شرط إضافي بعد if في Python؟",
+    "options": [
+      { "id": "a", "text": "elif" },
+      { "id": "b", "text": "elseif" },
+      { "id": "c", "text": "switch" },
+      { "id": "d", "text": "case" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "نستخدم elif لفحص شرط آخر إذا كان الشرط الأول خاطئًا.",
+    "points": 1
+  },
+  {
+    "id": "q-05-2", "lessonId": "lesson-05", "type": "single-choice",
+    "question": "ما العامل المستخدم للتحقق من تساوي قيمتين في Python؟",
+    "options": [
+      { "id": "a", "text": "=" },
+      { "id": "b", "text": "==" },
+      { "id": "c", "text": "!=" },
+      { "id": "d", "text": "===" }
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "العامل == يتحقق من تساوي قيمتين، بينما = يُستخدم لإسناد القيم.",
+    "points": 1
+  },
+  {
+    "id": "q-05-3", "lessonId": "lesson-05", "type": "multiple-choice",
+    "question": "أي من العوامل التالية عوامل مقارنة في Python؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": ">" },
+      { "id": "b", "text": ">=" },
+      { "id": "c", "text": "!=" },
+      { "id": "d", "text": "=" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "> و >= و != عوامل مقارنة، أما = فهو عامل إسناد وليس مقارنة.",
+    "points": 1
+  },
+  {
+    "id": "q-05-4", "lessonId": "lesson-05", "type": "multiple-choice",
+    "question": "متى تكون نتيجة الشرط (a > 5 and b < 10) صحيحة؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "عندما a = 6 و b = 5" },
+      { "id": "b", "text": "عندما a = 10 و b = 9" },
+      { "id": "c", "text": "عندما a = 5 و b = 10" },
+      { "id": "d", "text": "عندما a = 7 و b = 20" }
+    ],
+    "correctAnswers": ["a", "b"],
+    "explanation": "العامل and يتطلب تحقق الشرطين معًا. في الحالتين a > 5 و b < 10 معًا، أما الباقي فينقض أحدهما الشرط.",
+    "points": 1
+  },
+  {
+    "id": "q-05-5", "lessonId": "lesson-05", "type": "true-false",
+    "question": "كتلة else تُنفذ عندما يكون شرط if صحيحًا.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["false"],
+    "explanation": "كتلة else تُنفذ عندما يكون شرط if خاطئًا، ولا يمكن تنفيذ الكتلتين معًا.",
+    "points": 1
+  },
+  {
+    "id": "q-05-6", "lessonId": "lesson-05", "type": "true-false",
+    "question": "الإزاحة (المسافات البادئة) إلزامية في Python لتحديد كتل الكود.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "Python تعتمد على الإزاحة لتحديد الكتل، وغيابها يسبب خطأ في تنفيذ البرنامج.",
+    "points": 1
+  },
+  {
+    "id": "q-05-7", "lessonId": "lesson-05", "type": "single-choice",
+    "question": "ماذا يطبع هذا الكود عند score = 8؟",
+    "options": [
+      { "id": "a", "text": "ناجح" },
+      { "id": "b", "text": "غير ناجح" },
+      { "id": "c", "text": "خطأ في البرنامج" },
+      { "id": "d", "text": "لا شيء" }
+    ],
+    "correctAnswers": ["b"],
+    "explanation": "بما أن 8 < 10، الشرط خاطئ فتُنفذ كتلة else وتطبع «غير ناجح».",
+    "points": 1
+  },
+
+  {
+    "id": "q-06-1", "lessonId": "lesson-06", "type": "single-choice",
+    "question": "ماذا يطبع الكود for i in range(3): print(i)؟",
+    "options": [
+      { "id": "a", "text": "0 1 2" },
+      { "id": "b", "text": "1 2 3" },
+      { "id": "c", "text": "0 1 2 3" },
+      { "id": "d", "text": "1 2" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "range(3) يولد الأعداد 0 و 1 و 2 (يبدأ من 0 ولا يشمل 3).",
+    "points": 1
+  },
+  {
+    "id": "q-06-2", "lessonId": "lesson-06", "type": "single-choice",
+    "question": "أي حلقة تُستخدم عندما لا نعرف عدد التكرارات مسبقًا؟",
+    "options": [
+      { "id": "a", "text": "while" },
+      { "id": "b", "text": "for" },
+      { "id": "c", "text": "def" },
+      { "id": "d", "text": "if" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "حلقة while تستمر ما دام الشرط صحيحًا، وتناسب الحالات التي لا نعرف فيها العدد مسبقًا.",
+    "points": 1
+  },
+  {
+    "id": "q-06-3", "lessonId": "lesson-06", "type": "multiple-choice",
+    "question": "ماذا تفعل العبارة break داخل الحلقة؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "تنهي الحلقة فورًا" },
+      { "id": "b", "text": "تنتقل إلى ما بعد الحلقة" },
+      { "id": "c", "text": "تنتقل إلى التكرار التالي" },
+      { "id": "d", "text": "توقف تنفيذ باقي أوامر الحلقة الحالية" }
+    ],
+    "correctAnswers": ["a", "b", "d"],
+    "explanation": "break تنهي الحلقة بالكامل وتنتقل لما بعدها، بينما continue تنتقل للتكرار التالي.",
+    "points": 1
+  },
+  {
+    "id": "q-06-4", "lessonId": "lesson-06", "type": "multiple-choice",
+    "question": "أي من الحالات التالية قد تسبب حلقة لا نهائية في while؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "نسيان تحديث المتغير داخل الحلقة" },
+      { "id": "b", "text": "شرط يبقى صحيحًا دائمًا" },
+      { "id": "c", "text": "تحديث المتغير بشكل صحيح" },
+      { "id": "d", "text": "عدم وجود شرط توقف" }
+    ],
+    "correctAnswers": ["a", "b", "d"],
+    "explanation": "الحلقة اللانهائية تحدث عندما يبقى الشرط صحيحًا دائمًا بسبب نسيان التحديث أو غياب شرط التوقف.",
+    "points": 1
+  },
+  {
+    "id": "q-06-5", "lessonId": "lesson-06", "type": "true-false",
+    "question": "range(5) يولد الأعداد من 1 إلى 5.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["false"],
+    "explanation": "range(5) يولد الأعداد من 0 إلى 4، أي أنه يبدأ من الصفر ولا يشمل 5.",
+    "points": 1
+  },
+  {
+    "id": "q-06-6", "lessonId": "lesson-06", "type": "true-false",
+    "question": "حلقة for تصلح للتكرار بعدد معروف من المرات.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "حلقة for مثالية عندما نعرف عدد التكرارات مسبقًا، كالمرور على عناصر قائمة أو range.",
+    "points": 1
+  },
+  {
+    "id": "q-06-7", "lessonId": "lesson-06", "type": "single-choice",
+    "question": "ماذا يفعل الكود التالي؟",
+    "options": [
+      { "id": "a", "text": "يطبع الأعداد من 1 إلى 5" },
+      { "id": "b", "text": "يطبع الأعداد من 0 إلى 4" },
+      { "id": "c", "text": "لا يطبع شيئًا" },
+      { "id": "d", "text": "يسبب خطأ" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "المتغير count يبدأ من 1 ويزداد حتى 5، والشرط count <= 5 يسمح بالتكرار حتى طباعة 5.",
+    "points": 1
+  },
+  {
+    "id": "q-06-8", "lessonId": "lesson-06", "type": "single-choice",
+    "question": "ما ناتج جمع الأعداد الزوجية بين 1 و 10؟",
+    "options": [
+      { "id": "a", "text": "30" },
+      { "id": "b", "text": "25" },
+      { "id": "c", "text": "55" },
+      { "id": "d", "text": "20" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "الأعداد الزوجية: 2 + 4 + 6 + 8 + 10 = 30.",
+    "points": 1
+  },
+
+  {
+    "id": "q-07-1", "lessonId": "lesson-07", "type": "single-choice",
+    "question": "ما الكلمة المفتاحية المستخدمة لتعريف دالة في Python؟",
+    "options": [
+      { "id": "a", "text": "def" },
+      { "id": "b", "text": "function" },
+      { "id": "c", "text": "func" },
+      { "id": "d", "text": "define" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "نستخدم الكلمة المفتاحية def لتعريف الدوال في Python.",
+    "points": 1
+  },
+  {
+    "id": "q-07-2", "lessonId": "lesson-07", "type": "single-choice",
+    "question": "ماذا تُرجع الدالة التي لا تحتوي على عبارة return؟",
+    "options": [
+      { "id": "a", "text": "None" },
+      { "id": "b", "text": "0" },
+      { "id": "c", "text": "خطأ" },
+      { "id": "d", "text": "قيمة فارغة" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "الدالة التي لا تحتوي على return ترجع القيمة None تلقائيًا.",
+    "points": 1
+  },
+  {
+    "id": "q-07-3", "lessonId": "lesson-07", "type": "multiple-choice",
+    "question": "ما فوائد استخدام الدوال في البرمجة؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "إعادة استخدام الكود" },
+      { "id": "b", "text": "تنظيم البرنامج" },
+      { "id": "c", "text": "تسهيل الصيانة والتعديل" },
+      { "id": "d", "text": "جعل البرنامج أبطأ دائمًا" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "الدوال تحسن التنظيم وإعادة الاستخدام والصيانة، ولا تجعل البرنامج أبطأ بالضرورة.",
+    "points": 1
+  },
+  {
+    "id": "q-07-4", "lessonId": "lesson-07", "type": "multiple-choice",
+    "question": "أي من المكتبات التالية قياسية في Python؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "math" },
+      { "id": "b", "text": "random" },
+      { "id": "c", "text": "numpy" },
+      { "id": "d", "text": "datetime" }
+    ],
+    "correctAnswers": ["a", "b", "d"],
+    "explanation": "math و random و datetime مكتبات قياسية مضمنة، أما numpy فمكتبة خارجية يجب تثبيتها.",
+    "points": 1
+  },
+  {
+    "id": "q-07-5", "lessonId": "lesson-07", "type": "true-false",
+    "question": "يمكن للدالة أن تستقبل أكثر من وسيط (معامل).",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "يمكن للدالة استقبال عدة وسائط تفصل بينها فواصل، مثل add(a, b).",
+    "points": 1
+  },
+  {
+    "id": "q-07-6", "lessonId": "lesson-07", "type": "true-false",
+    "question": "عبارة return تنهي تنفيذ الدالة وترجع القيمة إلى مكان الاستدعاء.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "return ترجع القيمة وتنهي تنفيذ الدالة فورًا.",
+    "points": 1
+  },
+  {
+    "id": "q-07-7", "lessonId": "lesson-07", "type": "single-choice",
+    "question": "ما ناتج استدعاء add(3, 5) لهذه الدالة؟",
+    "options": [
+      { "id": "a", "text": "8" },
+      { "id": "b", "text": "35" },
+      { "id": "c", "text": "15" },
+      { "id": "d", "text": "None" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "الدالة add ترجع مجموع الوسيطين: 3 + 5 = 8.",
+    "points": 1
+  },
+
+  {
+    "id": "q-08-1", "lessonId": "lesson-08", "type": "single-choice",
+    "question": "ما الذي يمثل صفًا واحدًا في جدول قاعدة البيانات؟",
+    "options": [
+      { "id": "a", "text": "سجل واحد" },
+      { "id": "b", "text": "عمود" },
+      { "id": "c", "text": "جدول كامل" },
+      { "id": "d", "text": "قاعدة بيانات" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "الصف (Record) يمثل سجلًا واحدًا، مثل بيانات طالب واحد.",
+    "points": 1
+  },
+  {
+    "id": "q-08-2", "lessonId": "lesson-08", "type": "single-choice",
+    "question": "ما المفتاح الذي يحدد كل صف بشكل فريد ولا يمكن أن يتكرر؟",
+    "options": [
+      { "id": "a", "text": "المفتاح الأساسي" },
+      { "id": "b", "text": "المفتاح الأجنبي" },
+      { "id": "c", "text": "العمود النصي" },
+      { "id": "d", "text": "الفهرس" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "المفتاح الأساسي (Primary Key) يحدد كل صف بشكل فريد ولا يقبل التكرار أو الفراغ.",
+    "points": 1
+  },
+  {
+    "id": "q-08-3", "lessonId": "lesson-08", "type": "multiple-choice",
+    "question": "ماذا يمثل كل عمود (Column) في الجدول؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "خاصية من خصائص الكيان" },
+      { "id": "b", "text": "نوعًا واحدًا من البيانات" },
+      { "id": "c", "text": "سجلًا كاملًا" },
+      { "id": "d", "text": "حقلًا له اسم محدد" }
+    ],
+    "correctAnswers": ["a", "b", "d"],
+    "explanation": "العمود يمثل خاصية (حقل) بنوع بيانات محدد واسم، بينما السجل الكامل هو الصف.",
+    "points": 1
+  },
+  {
+    "id": "q-08-4", "lessonId": "lesson-08", "type": "multiple-choice",
+    "question": "أي من العبارات التالية صحيحة حول المفتاح الأجنبي؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "يربط جدولًا بجدول آخر" },
+      { "id": "b", "text": "يشير إلى المفتاح الأساسي في جدول آخر" },
+      { "id": "c", "text": "يبني العلاقات بين الجداول" },
+      { "id": "d", "text": "يجب أن يكون فريدًا في جدوله دائمًا" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "المفتاح الأجنبي يربط الجداول ويشير لمفتاح أساسي في جدول آخر، ولا يشترط أن يكون فريدًا في جدوله.",
+    "points": 1
+  },
+  {
+    "id": "q-08-5", "lessonId": "lesson-08", "type": "true-false",
+    "question": "SQL هي اللغة القياسية للتعامل مع قواعد البيانات العلائقية.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "SQL (Structured Query Language) هي اللغة القياسية للاستعلام عن قواعد البيانات العلائقية وإدارتها.",
+    "points": 1
+  },
+  {
+    "id": "q-08-6", "lessonId": "lesson-08", "type": "true-false",
+    "question": "يمكن أن يتكرر المفتاح الأساسي في نفس الجدول.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["false"],
+    "explanation": "المفتاح الأساسي يجب أن يكون فريدًا لكل صف، ولا يمكن أن يتكرر أو يكون فارغًا.",
+    "points": 1
+  },
+  {
+    "id": "q-08-7", "lessonId": "lesson-08", "type": "single-choice",
+    "question": "في علاقة «واحد إلى متعدد»، سجل واحد في جدول الوحدات يرتبط بـ...",
+    "options": [
+      { "id": "a", "text": "عدة دروس في جدول الدروس" },
+      { "id": "b", "text": "درس واحد فقط" },
+      { "id": "c", "text": "لا شيء" },
+      { "id": "d", "text": "كل الجداول" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "الوحدة الواحدة تضم عدة دروس، لذلك العلاقة هي واحد إلى متعدد.",
+    "points": 1
+  },
+  {
+    "id": "q-08-8", "lessonId": "lesson-08", "type": "single-choice",
+    "question": "ما الغرض من نظام إدارة قواعد البيانات (DBMS)؟",
+    "options": [
+      { "id": "a", "text": "إدارة وتنظيم واسترجاع البيانات بكفاءة" },
+      { "id": "b", "text": "كتابة الأكواد البرمجية" },
+      { "id": "c", "text": "تصميم واجهات المستخدم" },
+      { "id": "d", "text": "تسريع الإنترنت" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "نظام إدارة قواعد البيانات مسؤول عن تخزين البيانات وتنظيمها واسترجاعها بشكل آمن وفعال.",
+    "points": 1
+  },
+
+  {
+    "id": "q-09-1", "lessonId": "lesson-09", "type": "single-choice",
+    "question": "ما الأمر المستخدم لاسترجاع البيانات من جدول في SQL؟",
+    "options": [
+      { "id": "a", "text": "SELECT" },
+      { "id": "b", "text": "GET" },
+      { "id": "c", "text": "FETCH" },
+      { "id": "d", "text": "READ" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "الأمر SELECT هو الأداة الأساسية لاسترجاع البيانات من الجداول.",
+    "points": 1
+  },
+  {
+    "id": "q-09-2", "lessonId": "lesson-09", "type": "single-choice",
+    "question": "ما الشرط المستخدم لفلترة الصفوف في استعلام SQL؟",
+    "options": [
+      { "id": "a", "text": "WHERE" },
+      { "id": "b", "text": "IF" },
+      { "id": "c", "text": "FILTER" },
+      { "id": "d", "text": "GROUP" }
+    ],
+    "correctAnswers": ["a"],
+    "explanation": "شرط WHERE يحدد الصفوف التي ستظهر في النتيجة.",
+    "points": 1
+  },
+  {
+    "id": "q-09-3", "lessonId": "lesson-09", "type": "multiple-choice",
+    "question": "أي من الدوال التالية دوال تجميعية في SQL؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "COUNT()" },
+      { "id": "b", "text": "SUM()" },
+      { "id": "c", "text": "AVG()" },
+      { "id": "d", "text": "PRINT()" }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "explanation": "COUNT و SUM و AVG دوال تجميعية تعمل على مجموعة صفوف، أما PRINT فليست دالة SQL.",
+    "points": 1
+  },
+  {
+    "id": "q-09-4", "lessonId": "lesson-09", "type": "multiple-choice",
+    "question": "ما الاستخدام الصحيح لشرط ORDER BY؟ (اختر كل ما ينطبق)",
+    "options": [
+      { "id": "a", "text": "ترتيب النتائج تصاعديًا بـ ASC" },
+      { "id": "b", "text": "ترتيب النتائج تنازليًا بـ DESC" },
+      { "id": "c", "text": "فلترة الصفوف حسب شرط" },
+      { "id": "d", "text": "ترتيب النتائج حسب عمود معين" }
+    ],
+    "correctAnswers": ["a", "b", "d"],
+    "explanation": "ORDER BY يرتب النتائج حسب عمود تصاعديًا أو تنازليًا، أما الفلترة فتتم بـ WHERE.",
+    "points": 1
+  },
+  {
+    "id": "q-09-5", "lessonId": "lesson-09", "type": "true-false",
+    "question": "الرمز * في SELECT يعني استرجاع كل الأعمدة.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "SELECT * FROM table يسترجع كل الأعمدة من الجدول.",
+    "points": 1
+  },
+  {
+    "id": "q-09-6", "lessonId": "lesson-09", "type": "true-false",
+    "question": "شرط LIKE يُستخدم للبحث عن نمط معين في النصوص.",
+    "options": [
+      { "id": "true", "text": "صحيح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswers": ["true"],
+    "explanation": "LIKE مع الرمز % يسمح بالبحث عن أنماط نصوص، مثل الأسماء التي تبدأ بحرف معين.",
+    "points": 1
+  }
+]
