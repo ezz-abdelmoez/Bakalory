@@ -1,34 +1,12 @@
 [
   {
-    "id": "unit-algorithms",
-    "slug": "algorithms",
+    "id": "unit-it-society",
+    "slug": "it-and-society",
     "order": 1,
-    "title": "الخوارزميات",
-    "description": "المفاهيم الأساسية لحل المشكلات: مفهوم الخوارزمية، المخططات الانسيابية، وطرق الترتيب والبحث.",
-    "icon": "Workflow",
+    "title": "تكنولوجيا المعلومات والمجتمع",
+    "description": "استكشف مراحل تطور تكنولوجيا المعلومات وأثرها العميق في المجتمع، من الحواسيب الأولى إلى الذكاء الاصطناعي والحوسبة الكمومية.",
+    "icon": "Network",
     "color": "blue",
-    "lessonCount": 0,
-    "questionCount": 0
-  },
-  {
-    "id": "unit-python",
-    "slug": "python",
-    "order": 2,
-    "title": "البرمجة بلغة Python",
-    "description": "تعلّم أساسيات البرمجة بلغة بايثون: المتغيرات، الشروط، الحلقات، والدوال خطوة بخطوة.",
-    "icon": "Code2",
-    "color": "green",
-    "lessonCount": 0,
-    "questionCount": 0
-  },
-  {
-    "id": "unit-databases",
-    "slug": "databases",
-    "order": 3,
-    "title": "قواعد البيانات",
-    "description": "مقدمة إلى قواعد البيانات العلائقية ولغة SQL وأهم الاستعلامات الأساسية.",
-    "icon": "Database",
-    "color": "violet",
     "lessonCount": 0,
     "questionCount": 0
   }

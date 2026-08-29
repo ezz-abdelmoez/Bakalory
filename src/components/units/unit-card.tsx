@@ -3,6 +3,7 @@ import {
   ArrowLeft,
   Code2,
   Database,
+  Network,
   Workflow,
   type LucideIcon,
 } from "lucide-react";
@@ -22,6 +23,7 @@ const unitIcons: Record<string, LucideIcon> = {
   Workflow,
   Code2,
   Database,
+  Network,
 };
 
 const iconColorClasses: Record<string, string> = {

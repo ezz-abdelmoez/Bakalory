@@ -69,43 +69,38 @@ describe("mock workflows", () => {
   });
 
   // 2. Units -------------------------------------------------------------
-  it("returns 3 ordered units with computed counts", async () => {
+  it("returns 1 ordered unit with computed counts", async () => {
     const units = await api.units.list();
-    expect(units).toHaveLength(3);
-    expect(units.map((unit) => unit.order)).toEqual([1, 2, 3]);
-    expect(units[0].slug).toBe("algorithms");
-    expect(units[0].lessonCount).toBe(3);
+    expect(units).toHaveLength(1);
+    expect(units.map((unit) => unit.order)).toEqual([1]);
+    expect(units[0].slug).toBe("it-and-society");
+    expect(units[0].title).toBe("تكنولوجيا المعلومات والمجتمع");
+    expect(units[0].lessonCount).toBe(1);
     expect(units[0].questionCount).toBeGreaterThan(0);
   });
 
   // 3. Lessons list ------------------------------------------------------
-  it("returns 9 published lessons", async () => {
+  it("returns 1 published lesson", async () => {
     const result = await api.lessons.list({ pageSize: 100 });
-    expect(result.meta.total).toBe(9);
+    expect(result.meta.total).toBe(1);
     expect(result.items.every((lesson) => lesson.status === "published")).toBe(true);
   });
 
   it("searches lessons by query", async () => {
-    const result = await api.lessons.list({ search: "Python" });
+    const result = await api.lessons.list({ search: "الحوسبة السحابية" });
     expect(result.items.map((lesson) => lesson.id).sort()).toEqual([
-      "lesson-04",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
+      "lesson-01",
     ]);
   });
 
   it("filters lessons by unit and difficulty", async () => {
-    const byUnit = await api.lessons.list({ unitId: "unit-python", pageSize: 100 });
+    const byUnit = await api.lessons.list({ unitId: "unit-it-society", pageSize: 100 });
     expect(byUnit.items.map((lesson) => lesson.id).sort()).toEqual([
-      "lesson-04",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
+      "lesson-01",
     ]);
 
     const beginner = await api.lessons.list({ difficulty: "beginner", pageSize: 100 });
-    expect(beginner.items).toHaveLength(4);
+    expect(beginner.items).toHaveLength(1);
 
     const drafts = await api.lessons.list({ status: "draft", pageSize: 100 });
     expect(drafts.items).toHaveLength(0);
@@ -113,21 +108,18 @@ describe("mock workflows", () => {
 
   it("paginates with correct meta", async () => {
     const page1 = await api.lessons.list({ page: 1, pageSize: 4 });
-    expect(page1.items).toHaveLength(4);
-    expect(page1.meta.total).toBe(9);
-    expect(page1.meta.totalPages).toBe(3);
-
-    const page3 = await api.lessons.list({ page: 3, pageSize: 4 });
-    expect(page3.items).toHaveLength(1);
+    expect(page1.items).toHaveLength(1);
+    expect(page1.meta.total).toBe(1);
+    expect(page1.meta.totalPages).toBe(1);
   });
 
   // 4. Lesson detail -----------------------------------------------------
   it("gets lesson detail by slug with computed counts", async () => {
-    const lesson = await api.lessons.get("introduction-to-algorithms");
-    expect(lesson.title).toBe("مقدمة في الخوارزميات");
-    expect(lesson.unitSlug).toBe("algorithms");
-    expect(lesson.questionCount).toBe(6);
-    expect(lesson.resourceCount).toBe(6); // 4 uploads + video + link
+    const lesson = await api.lessons.get("it-evolution-and-social-change");
+    expect(lesson.title).toBe("تطور تكنولوجيا المعلومات والتحول الاجتماعي");
+    expect(lesson.unitSlug).toBe("it-and-society");
+    expect(lesson.questionCount).toBe(8);
+    expect(lesson.resourceCount).toBe(2); // شرح + سلايد
     expect(lesson.content.objectives.length).toBeGreaterThan(0);
   });
 
@@ -139,42 +131,23 @@ describe("mock workflows", () => {
   });
 
   // 5. Resources ---------------------------------------------------------
-  it("every lesson has 3-6 resources; uploads have valid paths and externals have URLs", async () => {
-    const all = await api.lessons.list({ pageSize: 100 });
-    for (const lesson of all.items) {
-      const resources = await api.lessons.resources(lesson.slug);
-      expect(resources.length).toBeGreaterThanOrEqual(3);
-      expect(resources.length).toBeLessThanOrEqual(6);
-      for (const resource of resources) {
-        if (resource.source === "upload") {
-          expect(resource.filePath?.startsWith("/lessons/")).toBe(true);
-        } else {
-          expect(resource.url).toBeTruthy();
-        }
-        expect(typeof resource.downloadable).toBe("boolean");
-        expect(typeof resource.viewable).toBe("boolean");
-      }
+  it("lesson resources use the real /resources path convention", async () => {
+    const resources = await api.lessons.resources("it-evolution-and-social-change");
+    expect(resources).toHaveLength(2);
+    for (const resource of resources) {
+      expect(resource.source).toBe("upload");
+      expect(resource.filePath?.startsWith("/resources/2bac/engineering-cs/")).toBe(true);
+      expect(typeof resource.downloadable).toBe("boolean");
+      expect(typeof resource.viewable).toBe("boolean");
     }
-  });
-
-  it("supports extensible resource types (video and external link)", async () => {
-    const resources = await api.lessons.resources("introduction-to-algorithms");
-    const video = resources.find((resource) => resource.type === "video");
-    const link = resources.find((resource) => resource.type === "link");
-
-    expect(video).toBeDefined();
-    expect(video?.source).toBe("external");
-    expect(video?.url).toBeTruthy();
-
-    expect(link).toBeDefined();
-    expect(link?.source).toBe("external");
-    expect(link?.url).toMatch(/^https?:\/\//);
+    const types = resources.map((resource) => resource.type).sort();
+    expect(types).toEqual(["pdf", "slides"]);
   });
 
   // 6. Quiz --------------------------------------------------------------
   it("strips correctAnswers from the quiz endpoint", async () => {
-    const quiz = await api.lessons.quiz("introduction-to-algorithms");
-    expect(quiz).toHaveLength(6);
+    const quiz = await api.lessons.quiz("it-evolution-and-social-change");
+    expect(quiz).toHaveLength(8);
     for (const question of quiz) {
       expect(question).not.toHaveProperty("correctAnswers");
     }
@@ -253,7 +226,7 @@ describe("mock workflows", () => {
   });
 
   it("grades a full quiz through the POST grade endpoint", async () => {
-    const questions = await api.lessons.questions("introduction-to-algorithms");
+    const questions = await api.lessons.questions("it-evolution-and-social-change");
     const answers: Record<string, string[]> = {};
     for (const question of questions) {
       answers[question.id] = [...question.correctAnswers];
@@ -263,11 +236,11 @@ describe("mock workflows", () => {
       answers,
       startedAt: new Date().toISOString(),
     };
-    const result = await api.quiz.grade("introduction-to-algorithms", input);
+    const result = await api.quiz.grade("it-evolution-and-social-change", input);
     expect(result.percent).toBe(100);
-    expect(result.score).toBe(6);
-    expect(result.total).toBe(6);
-    expect(result.correctCount).toBe(6);
+    expect(result.score).toBe(8);
+    expect(result.total).toBe(8);
+    expect(result.correctCount).toBe(8);
   });
 
   // 7. Validation --------------------------------------------------------
@@ -278,7 +251,7 @@ describe("mock workflows", () => {
       startedAt: 42,
     } as unknown as GradeQuizInput;
     await expect(
-      api.quiz.grade("introduction-to-algorithms", badInput)
+      api.quiz.grade("it-evolution-and-social-change", badInput)
     ).rejects.toMatchObject({ status: 422, code: "INVALID_API_REQUEST" });
   });
 
@@ -325,19 +298,9 @@ describe("mock workflows", () => {
   });
 
   // 9. Lesson navigation -------------------------------------------------
-  it("returns previous/next navigation across unit boundaries", async () => {
-    const nav = await api.lessons.navigation("sorting-and-searching");
-    expect(nav.previous?.slug).toBe("algorithm-flows");
-    expect(nav.next?.slug).toBe("python-basics");
-  });
-
-  it("wraps correctly at the first and last lessons", async () => {
-    const first = await api.lessons.navigation("introduction-to-algorithms");
-    expect(first.previous).toBeUndefined();
-    expect(first.next?.slug).toBe("algorithm-flows");
-
-    const last = await api.lessons.navigation("sql-queries");
-    expect(last.next).toBeUndefined();
-    expect(last.previous?.slug).toBe("sql-basics");
+  it("returns empty navigation for a single-lesson course", async () => {
+    const nav = await api.lessons.navigation("it-evolution-and-social-change");
+    expect(nav.previous).toBeUndefined();
+    expect(nav.next).toBeUndefined();
   });
 });
