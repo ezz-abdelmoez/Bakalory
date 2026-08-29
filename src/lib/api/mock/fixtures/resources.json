@@ -1,0 +1,30 @@
+[
+  {
+    "id": "r-01-1",
+    "lessonId": "lesson-01",
+    "title": "ملف الشرح التفصيلي",
+    "type": "pdf",
+    "source": "upload",
+    "fileName": "تطور تكنولوجيا المعلومات والتحول الاجتماعي — شرح تفصيلي.pdf",
+    "filePath": "/resources/2bac/engineering-cs/it-evolution-and-social-change/explanation/detailed-explanation.pdf",
+    "mimeType": "application/pdf",
+    "size": "1.0 MB",
+    "description": "ملف الشرح التفصيلي للدرس: من الحواسيب الأولى إلى الذكاء الاصطناعي والحوسبة الكمومية، مع الأمثلة والتمارين.",
+    "downloadable": true,
+    "viewable": true
+  },
+  {
+    "id": "r-01-2",
+    "lessonId": "lesson-01",
+    "title": "عرض الدرس (سلايد)",
+    "type": "slides",
+    "source": "upload",
+    "fileName": "تطور تكنولوجيا المعلومات والتحول الاجتماعي — سليد.pdf",
+    "filePath": "/resources/2bac/engineering-cs/it-evolution-and-social-change/slides/slides.pdf",
+    "mimeType": "application/pdf",
+    "size": "1.4 MB",
+    "description": "عرض تقديمي (سلايد) يلخص مراحل تطور تكنولوجيا المعلومات والتغيرات الاجتماعية والتقنيات الناشئة.",
+    "downloadable": true,
+    "viewable": true
+  }
+]
