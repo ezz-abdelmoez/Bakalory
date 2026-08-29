@@ -6,12 +6,13 @@ import { ApiQueryError } from "@/components/shared/api-query-error";
 import { EmptyState } from "@/components/shared/empty-state";
 import { PageHeader } from "@/components/shared/page-header";
 import { Skeleton } from "@/components/ui/skeleton";
+import { PageContainer } from "@/components/shared/page-container";
 
 export function UnitsPage() {
   const { data, isLoading, isError, error, refetch } = useUnits();
 
   return (
-    <div className="flex flex-col gap-6 py-8">
+    <PageContainer className="flex flex-col gap-6 py-8">
       <PageHeader
         title="الوحدات"
         description="ثلاث وحدات تغطي كامل منهج البرمجة للسنة الثانية باكالوريا."
@@ -34,6 +35,6 @@ export function UnitsPage() {
       ) : (
         <EmptyState title="لا توجد وحدات" description="لم يتم العثور على أي وحدات." />
       )}
-    </div>
+    </PageContainer>
   );
 }

@@ -8,7 +8,7 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t bg-muted/40">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 py-10 md:flex-row">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-4 py-10 md:flex-row">
         <div className="flex flex-col items-center gap-2 md:items-start">
           <Link href="/" className="flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-primary" aria-hidden="true" />
