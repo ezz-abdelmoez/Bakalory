@@ -17,6 +17,7 @@ import { LessonFilterBar } from "./lesson-filter-bar";
 import { ApiQueryError } from "@/components/shared/api-query-error";
 import { EmptyState } from "@/components/shared/empty-state";
 import { PageHeader } from "@/components/shared/page-header";
+import { PageContainer } from "@/components/shared/page-container";
 
 export function LessonsPage() {
   const [searchInput, setSearchInput] = useState("");
@@ -41,7 +42,7 @@ export function LessonsPage() {
   const hasSearch = Boolean(debouncedSearch.trim());
 
   return (
-    <div className="flex flex-col gap-6 py-8">
+    <PageContainer className="flex flex-col gap-6 py-8">
       <PageHeader
         title="الدروس"
         description="استعرض جميع دروس البرمجة، وابحث وصفِّ حسب الوحدة والمستوى."
@@ -88,6 +89,6 @@ export function LessonsPage() {
           description="جرّب البحث بكلمة أخرى أو غيّر الفلاتر."
         />
       )}
-    </div>
+    </PageContainer>
   );
 }

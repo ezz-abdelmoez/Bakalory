@@ -26,6 +26,8 @@ export const resourceTypeLabels: Record<ResourceType, string> = {
   image: "صورة",
   zip: "أرشيف",
   doc: "مستند",
+  video: "فيديو",
+  link: "رابط خارجي",
 };
 
 export const unitColorTokens: Record<UnitColor, string> = {
