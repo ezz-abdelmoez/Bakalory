@@ -24,6 +24,9 @@ the mock transport; the real backend must return byte-compatible payloads.
 | POST | `/v1/lessons/:slug/quiz/grade` | body `GradeQuizInput` | `QuizResultDto` | grades server-side; 404 if lesson missing |
 | GET | `/v1/lessons/next/:slug` | – | `{ previous?, next? }` | lesson summaries for auto navigation |
 | GET | `/v1/quiz/attempts/:attemptId` | – | `QuizResultDto` | attempt lookup for the result/review screen |
+| POST | `/v1/lessons/:slug/resources` | multipart (`file`, `title`, `type`, `description`) | `ResourceDto` | **admin**: upload a file → `source: "upload"` |
+| POST | `/v1/lessons/:slug/resources/link` | JSON `{ title, type: "link"\|"video", url, duration?, description? }` | `ResourceDto` | **admin**: attach external URL → `source: "external"` |
+| DELETE | `/v1/lessons/:slug/resources/:id` | – | `204` | **admin**: remove a resource |
 
 > `GET /v1/quiz/attempts/:attemptId` is an addition to the §5.7 table: it backs
 > the `/lessons/[slug]/quiz/result/[attemptId]` review page. In the mock it
@@ -58,7 +61,8 @@ source files are the exact reference.
 Difficulty   = "beginner" | "intermediate" | "advanced"
 LessonStatus = "published" | "draft"
 LessonSort   = "default" | "newest" | "duration" | "difficulty"
-ResourceType = "pdf" | "slides" | "code" | "exercise" | "image" | "zip" | "doc"
+ResourceType = "pdf" | "slides" | "code" | "exercise" | "image" | "zip" | "doc" | "video" | "link"
+ResourceSource = "upload" | "external"
 QuestionType = "single-choice" | "multiple-choice" | "true-false"
 UnitColor    = "blue" | "green" | "violet" | "amber"
 ```
@@ -90,9 +94,13 @@ LessonDto extends LessonSummaryDto { unitSlug: string; content: LessonContentDto
 
 ResourceDto {
   id: string; lessonId: string; title: string; type: ResourceType;
-  fileName: string; filePath: string; size: string; description: string;
-  downloadable: boolean; viewable: boolean;
+  source: ResourceSource;
+  fileName?: string; filePath?: string; url?: string; mimeType?: string;
+  size?: string; duration?: number;
+  description: string; downloadable: boolean; viewable: boolean;
 }
+// source "upload" ⇒ filePath required; source "external" ⇒ url required.
+// Storage path convention + upload endpoints: see EDU_BACKEND_FILE_STORAGE.md
 
 QuestionOptionDto { id: string; text: string }
 QuestionDto {

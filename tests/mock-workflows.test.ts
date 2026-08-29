@@ -127,7 +127,7 @@ describe("mock workflows", () => {
     expect(lesson.title).toBe("مقدمة في الخوارزميات");
     expect(lesson.unitSlug).toBe("algorithms");
     expect(lesson.questionCount).toBe(6);
-    expect(lesson.resourceCount).toBe(4);
+    expect(lesson.resourceCount).toBe(6); // 4 uploads + video + link
     expect(lesson.content.objectives.length).toBeGreaterThan(0);
   });
 
@@ -139,18 +139,36 @@ describe("mock workflows", () => {
   });
 
   // 5. Resources ---------------------------------------------------------
-  it("every lesson has 3-5 resources with valid download paths", async () => {
+  it("every lesson has 3-6 resources; uploads have valid paths and externals have URLs", async () => {
     const all = await api.lessons.list({ pageSize: 100 });
     for (const lesson of all.items) {
       const resources = await api.lessons.resources(lesson.slug);
       expect(resources.length).toBeGreaterThanOrEqual(3);
-      expect(resources.length).toBeLessThanOrEqual(5);
+      expect(resources.length).toBeLessThanOrEqual(6);
       for (const resource of resources) {
-        expect(resource.filePath.startsWith("/lessons/")).toBe(true);
+        if (resource.source === "upload") {
+          expect(resource.filePath?.startsWith("/lessons/")).toBe(true);
+        } else {
+          expect(resource.url).toBeTruthy();
+        }
         expect(typeof resource.downloadable).toBe("boolean");
         expect(typeof resource.viewable).toBe("boolean");
       }
     }
+  });
+
+  it("supports extensible resource types (video and external link)", async () => {
+    const resources = await api.lessons.resources("introduction-to-algorithms");
+    const video = resources.find((resource) => resource.type === "video");
+    const link = resources.find((resource) => resource.type === "link");
+
+    expect(video).toBeDefined();
+    expect(video?.source).toBe("external");
+    expect(video?.url).toBeTruthy();
+
+    expect(link).toBeDefined();
+    expect(link?.source).toBe("external");
+    expect(link?.url).toMatch(/^https?:\/\//);
   });
 
   // 6. Quiz --------------------------------------------------------------

@@ -16,7 +16,11 @@ export const resourceTypeSchema = z.enum([
   "image",
   "zip",
   "doc",
+  "video",
+  "link",
 ]);
+
+export const resourceSourceSchema = z.enum(["upload", "external"]);
 
 export const unitColorSchema = z.enum(["blue", "green", "violet", "amber"]);
 
@@ -96,9 +100,13 @@ export const resourceSchema = z.object({
   lessonId: z.string().min(1),
   title: z.string().min(1),
   type: resourceTypeSchema,
-  fileName: z.string().min(1),
-  filePath: z.string().min(1),
-  size: z.string(),
+  source: resourceSourceSchema,
+  fileName: z.string().min(1).optional(),
+  filePath: z.string().min(1).optional(),
+  url: z.string().url().optional(),
+  mimeType: z.string().optional(),
+  size: z.string().optional(),
+  duration: z.number().int().nonnegative().optional(),
   description: z.string(),
   downloadable: z.boolean(),
   viewable: z.boolean(),

@@ -70,13 +70,20 @@ the API (camelCase).
 | id | string | primary key |
 | lessonId | string | FK → Lesson |
 | title | string | e.g. `شرح الدرس` |
-| type | enum | `pdf` \| `slides` \| `code` \| `exercise` \| `image` \| `zip` \| `doc` |
-| fileName | string | Arabic display / download name |
-| filePath | string | public path, e.g. `/lessons/lesson-01/pdf/lesson.pdf` |
-| size | string | human-readable, e.g. `2.4 MB` |
+| type | enum | `pdf` \| `slides` \| `code` \| `exercise` \| `image` \| `zip` \| `doc` \| `video` \| `link` |
+| source | enum | `upload` (stored file) \| `external` (hosted URL) |
+| fileName? | string | Arabic display / download name |
+| filePath? | string | `/resources/{stage}/{subject}/{lesson-slug}/{category}/{file}` |
+| url? | string | external URL (video / link) |
+| mimeType? | string | `application/pdf`, `video/mp4`, `video/youtube`, … |
+| size? | string | human-readable, e.g. `2.4 MB` |
+| duration? | number | minutes (video) |
 | description | string | |
 | downloadable | boolean | |
-| viewable | boolean | pdf/image open in a new tab |
+| viewable | boolean | pdf/image open in a new tab; video plays inline |
+
+See [`EDU_BACKEND_FILE_STORAGE.md`](./EDU_BACKEND_FILE_STORAGE.md) for the
+storage path convention and the upload API.
 
 ### Question
 

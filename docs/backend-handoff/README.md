@@ -76,5 +76,8 @@ NEXT_PUBLIC_PROGRESS_MODE=local          # → api later
   model derived from the contracts.
 - [`EDU_BACKEND_API_CONTRACT.md`](./architecture/EDU_BACKEND_API_CONTRACT.md) — frozen
   endpoint table and Zod shapes.
+- [`EDU_BACKEND_FILE_STORAGE.md`](./architecture/EDU_BACKEND_FILE_STORAGE.md) — the
+  file/folder hierarchy, resource taxonomy (pdf/slides/video/link…), and the
+  upload API.
 - [`EDU_BACKEND_BLUEPRINT.md`](./architecture/EDU_BACKEND_BLUEPRINT.md) — suggested
   phase-2 backend stack and migration plan.

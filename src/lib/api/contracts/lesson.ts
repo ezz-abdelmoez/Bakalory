@@ -10,7 +10,16 @@ export type ResourceType =
   | "exercise"
   | "image"
   | "zip"
-  | "doc";
+  | "doc"
+  | "video"
+  | "link";
+
+/**
+ * How a resource is delivered:
+ * - `upload`   → a file stored on the platform (`filePath` under /resources).
+ * - `external` → hosted elsewhere (`url`): YouTube video, reference link, ...
+ */
+export type ResourceSource = "upload" | "external";
 
 export interface LessonSummaryDto {
   id: string;
@@ -60,12 +69,16 @@ export interface ResourceDto {
   lessonId: string;
   title: string;
   type: ResourceType;
-  fileName: string;
-  filePath: string;
-  size: string;
+  source: ResourceSource;
+  fileName?: string; // display/download name (uploads)
+  filePath?: string; // storage path (uploads): /resources/{stage}/{subject}/{lesson}/{category}/{file}
+  url?: string; // external URL (video / link)
+  mimeType?: string; // application/pdf, video/mp4, video/youtube, ...
+  size?: string; // human-readable ("2.4 MB")
+  duration?: number; // minutes (video)
   description: string;
   downloadable: boolean;
-  viewable: boolean;
+  viewable: boolean; // can open/play in a new tab or inline
 }
 
 export interface LessonNavigationDto {
