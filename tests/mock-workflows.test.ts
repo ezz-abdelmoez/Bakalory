@@ -119,7 +119,7 @@ describe("mock workflows", () => {
     expect(lesson.title).toBe("تطور تكنولوجيا المعلومات والتحول الاجتماعي");
     expect(lesson.unitSlug).toBe("it-and-society");
     expect(lesson.questionCount).toBe(8);
-    expect(lesson.resourceCount).toBe(2); // شرح + سلايد
+    expect(lesson.resourceCount).toBe(3); // شرح + سلايد + إجابات
     expect(lesson.content.objectives.length).toBeGreaterThan(0);
   });
 
@@ -133,7 +133,7 @@ describe("mock workflows", () => {
   // 5. Resources ---------------------------------------------------------
   it("lesson resources use the real /resources path convention", async () => {
     const resources = await api.lessons.resources("it-evolution-and-social-change");
-    expect(resources).toHaveLength(2);
+    expect(resources).toHaveLength(3);
     for (const resource of resources) {
       expect(resource.source).toBe("upload");
       expect(resource.filePath?.startsWith("/resources/2bac/engineering-cs/")).toBe(true);
@@ -141,7 +141,7 @@ describe("mock workflows", () => {
       expect(typeof resource.viewable).toBe("boolean");
     }
     const types = resources.map((resource) => resource.type).sort();
-    expect(types).toEqual(["pdf", "slides"]);
+    expect(types).toEqual(["pdf", "pdf", "slides"]);
   });
 
   // 6. Quiz --------------------------------------------------------------
