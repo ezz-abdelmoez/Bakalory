@@ -4,7 +4,7 @@ import { UnitsPage } from "@/components/units/units-page";
 
 export const metadata: Metadata = {
   title: "الوحدات",
-  description: "استعرض وحدات منهج البرمجة للسنة الثانية باكالوريا.",
+  description: "استعرض وحدات منهج البرمجة والذكاء الاصطناعي للصف الثاني بكالوريا.",
 };
 
 export default function UnitsRoute() {

@@ -53,5 +53,357 @@
       ],
       "summary": "## الخلاصة\n\nمرّت تكنولوجيا المعلومات بسلسلة من المراحل المتتابعة، ولم يقتصر أثرها على أجهزة أسرع أو أصغر؛ بل امتد إلى طرق الوصول إلى المعلومات والتواصل والعمل والتعلّم والدفع. ومع انتشار الإنترنت والهواتف الذكية والحوسبة السحابية، أصبحت خدمات رقمية كثيرة جزءًا من الحياة اليومية، وظهرت تحديات جديدة تتعلق بالأمان والإنصاف وإتاحة الوصول.\n\n> **تذكّر:** تطورت تكنولوجيا المعلومات عبر خمس مراحل — الحواسيب، والإنترنت، والهواتف الذكية، والحوسبة السحابية — وتبقى التقنيات الناشئة اليوم (القيادة الذاتية، والواقع المعزز/الافتراضي، والحوسبة الكمومية) امتدادًا لهذا المسار نفسه من التغيير المستمر."
     }
+  },
+  {
+    "id": "lesson-02",
+    "slug": "how-artificial-intelligence-works",
+    "number": 2,
+    "title": "كيف يعمل الذكاء الاصطناعي",
+    "unitId": "unit-it-society",
+    "tags": [
+      "الذكاء الاصطناعي",
+      "التعلم الآلي",
+      "البيانات"
+    ],
+    "description": "محتوى درس كيف يعمل الذكاء الاصطناعي وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-03",
+    "slug": "ai-in-everyday-life-and-industry",
+    "number": 3,
+    "title": "الذكاء الاصطناعي في الحياة اليومية والصناعة",
+    "unitId": "unit-it-society",
+    "tags": [
+      "الذكاء الاصطناعي",
+      "الحياة اليومية",
+      "الصناعة"
+    ],
+    "description": "محتوى درس الذكاء الاصطناعي في الحياة اليومية والصناعة وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-04",
+    "slug": "ethical-issues-of-artificial-intelligence",
+    "number": 4,
+    "title": "القضايا الأخلاقية للذكاء الاصطناعي",
+    "unitId": "unit-it-society",
+    "tags": [
+      "أخلاقيات الذكاء الاصطناعي",
+      "الخصوصية",
+      "الإنصاف"
+    ],
+    "description": "محتوى درس القضايا الأخلاقية للذكاء الاصطناعي وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-05",
+    "slug": "encryption-and-authentication-techniques",
+    "number": 5,
+    "title": "تقنيات التشفير والمصادقة",
+    "unitId": "unit-cybersecurity",
+    "tags": [
+      "الأمن السيبراني",
+      "التشفير",
+      "المصادقة"
+    ],
+    "description": "محتوى درس تقنيات التشفير والمصادقة وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-06",
+    "slug": "network-security-design",
+    "number": 6,
+    "title": "تصميم أمن الشبكات",
+    "unitId": "unit-cybersecurity",
+    "tags": [
+      "الأمن السيبراني",
+      "أمن الشبكات",
+      "الحماية"
+    ],
+    "description": "محتوى درس تصميم أمن الشبكات وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-07",
+    "slug": "incident-response-and-risk-management",
+    "number": 7,
+    "title": "الاستجابة للحوادث وإدارة المخاطر",
+    "unitId": "unit-cybersecurity",
+    "tags": [
+      "الاستجابة للحوادث",
+      "إدارة المخاطر",
+      "الأمن السيبراني"
+    ],
+    "description": "محتوى درس الاستجابة للحوادث وإدارة المخاطر وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-08",
+    "slug": "web-application-architecture",
+    "number": 8,
+    "title": "البنية العامة لتطبيقات الويب",
+    "unitId": "unit-web-applications",
+    "tags": [
+      "تطبيقات الويب",
+      "العميل والخادم",
+      "بنية الويب"
+    ],
+    "description": "محتوى درس البنية العامة لتطبيقات الويب وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-09",
+    "slug": "web-application-communication-methods",
+    "number": 9,
+    "title": "طرق الاتصال في تطبيقات الويب",
+    "unitId": "unit-web-applications",
+    "tags": [
+      "تطبيقات الويب",
+      "HTTP",
+      "الاتصال"
+    ],
+    "description": "محتوى درس طرق الاتصال في تطبيقات الويب وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-10",
+    "slug": "front-end-technology-fundamentals",
+    "number": 10,
+    "title": "أساسيات تكنولوجيا الواجهة الأمامية",
+    "unitId": "unit-web-applications",
+    "tags": [
+      "الواجهة الأمامية",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "description": "محتوى درس أساسيات تكنولوجيا الواجهة الأمامية وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-11",
+    "slug": "media-types-and-characteristics",
+    "number": 11,
+    "title": "أنواع الوسائط وخصائصها",
+    "unitId": "unit-web-design-media",
+    "tags": [
+      "الوسائط",
+      "تصميم الويب",
+      "المحتوى الرقمي"
+    ],
+    "description": "محتوى درس أنواع الوسائط وخصائصها وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-12",
+    "slug": "information-design-and-user-experience",
+    "number": 12,
+    "title": "تصميم المعلومات وتجربة المستخدم للمواقع",
+    "unitId": "unit-web-design-media",
+    "tags": [
+      "تصميم المعلومات",
+      "تجربة المستخدم",
+      "UX"
+    ],
+    "description": "محتوى درس تصميم المعلومات وتجربة المستخدم للمواقع وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-13",
+    "slug": "website-evaluation-methods",
+    "number": 13,
+    "title": "أساليب تقييم المواقع الإلكترونية",
+    "unitId": "unit-web-design-media",
+    "tags": [
+      "تقييم المواقع",
+      "تصميم الويب",
+      "قابلية الاستخدام"
+    ],
+    "description": "محتوى درس أساليب تقييم المواقع الإلكترونية وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
+  },
+  {
+    "id": "lesson-14",
+    "slug": "iterative-website-improvement-process",
+    "number": 14,
+    "title": "عملية التحسين التكراري للمواقع",
+    "unitId": "unit-web-design-media",
+    "tags": [
+      "التحسين التكراري",
+      "تصميم الويب",
+      "تجربة المستخدم"
+    ],
+    "description": "محتوى درس عملية التحسين التكراري للمواقع وموارده واختباره قيد الإعداد.",
+    "difficulty": "beginner",
+    "duration": 0,
+    "status": "draft",
+    "resourceIds": [],
+    "questionIds": [],
+    "updatedAt": "2026-09-02",
+    "content": {
+      "introduction": "## المحتوى قيد الإعداد\n\nسيُضاف شرح هذا الدرس وموارده وأسئلته التفاعلية قريبًا.",
+      "objectives": [],
+      "concepts": [],
+      "explanation": "## المحتوى قيد الإعداد\n\nهذه مسودة ضمن هيكل منهج الترم الأول، ولم تُنشر للطلاب بعد.",
+      "examples": [],
+      "summary": "سيُضاف ملخص الدرس بعد اكتمال المحتوى."
+    }
   }
 ]

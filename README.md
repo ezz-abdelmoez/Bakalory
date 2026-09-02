@@ -1,10 +1,10 @@
-# برمجة 2 باك — منصة تعلم البرمجة (2ème Bac)
+# البرمجة والذكاء الاصطناعي — منصة تعليمية (2ème Bac)
 
-A modern, Arabic-first (RTL) educational website for **Programming / IT —
-2nd Year Baccalaureate (2ème Bac), Engineering & CS track (الهندسة والحاسب)**.
-Structured lessons, downloadable resources (PDF شرح + slides), interactive
-quizzes with instant results and answer review, previous/next navigation, and a
-local student dashboard.
+A modern, Arabic-first (RTL) educational website for **Programming & Artificial
+Intelligence — 2nd Year Baccalaureate (2ème Bac), Engineering & CS track
+(الهندسة والحاسب)**. Structured lessons, downloadable resources (PDF شرح +
+slides), interactive quizzes with instant results and answer review,
+previous/next navigation, and a local student dashboard.
 
 **v1 is frontend-only** — no backend, no database, no real auth. All data comes
 from local JSON fixtures, but the architecture is built exactly as if a backend
@@ -23,11 +23,18 @@ Contract + Schema + Fixture (JSON)  →  future REST API
 Switching from demo data to a real API is an **environment-flag change only**
 (`NEXT_PUBLIC_API_MODE=mock` → `http`).
 
-## Current curriculum
+## First-semester curriculum
 
-| Stage | Subject | Unit | Lesson |
-|---|---|---|---|
-| 2ème Bac | الهندسة والحاسب | تكنولوجيا المعلومات والمجتمع | تطور تكنولوجيا المعلومات والتحول الاجتماعي |
+| # | Unit | Lessons |
+|---:|---|---|
+| 1 | تكنولوجيا المعلومات والمجتمع | 1-1 تطور تكنولوجيا المعلومات والتحول الاجتماعي · 1-2 كيف يعمل الذكاء الاصطناعي · 1-3 الذكاء الاصطناعي في الحياة اليومية والصناعة · 1-4 القضايا الأخلاقية للذكاء الاصطناعي |
+| 2 | الأمن السيبراني | 2-1 تقنيات التشفير والمصادقة · 2-2 تصميم أمن الشبكات · 2-3 الاستجابة للحوادث وإدارة المخاطر |
+| 3 | تطبيقات الويب | 3-1 البنية العامة لتطبيقات الويب · 3-2 طرق الاتصال في تطبيقات الويب · 3-3 أساسيات تكنولوجيا الواجهة الأمامية |
+| 4 | تصميم الويب والوسائط | 4-1 أنواع الوسائط وخصائصها · 4-2 تصميم المعلومات وتجربة المستخدم للمواقع · 4-3 أساليب تقييم المواقع الإلكترونية · 4-4 عملية التحسين التكراري للمواقع |
+
+The first lesson is published. The remaining 13 lessons are represented as
+private draft records, ready to receive their content, resources, and quiz
+questions without exposing incomplete lessons to students.
 
 Files are organized under the extensible path convention:
 

@@ -14,14 +14,14 @@ export function UnitsSection() {
         <div>
           <h2 className="text-2xl font-bold">الوحدات الدراسية</h2>
           <p className="text-muted-foreground">
-            ثلاث وحدات تغطي منهج البرمجة للسنة الثانية باكالوريا.
+            أربع وحدات تغطي منهج البرمجة والذكاء الاصطناعي للصف الثاني بكالوريا.
           </p>
         </div>
       </div>
 
       {isLoading ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 3 }).map((_, index) => (
+          {Array.from({ length: 4 }).map((_, index) => (
             <Skeleton key={index} className="h-56 rounded-xl" />
           ))}
         </div>

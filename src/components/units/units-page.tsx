@@ -15,12 +15,12 @@ export function UnitsPage() {
     <PageContainer className="flex flex-col gap-6 py-8">
       <PageHeader
         title="الوحدات"
-        description="ثلاث وحدات تغطي كامل منهج البرمجة للسنة الثانية باكالوريا."
+        description="أربع وحدات تغطي منهج البرمجة والذكاء الاصطناعي للصف الثاني بكالوريا."
       />
 
       {isLoading ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: 3 }).map((_, index) => (
+          {Array.from({ length: 4 }).map((_, index) => (
             <Skeleton key={index} className="h-56 rounded-xl" />
           ))}
         </div>

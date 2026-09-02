@@ -8,7 +8,6 @@ import type {
   Difficulty,
   LessonFilter,
   LessonSort,
-  LessonStatus,
 } from "@/lib/api/contracts/lesson";
 import { LessonGrid } from "./lesson-grid";
 import { LessonGridSkeleton } from "./lesson-card-skeleton";
@@ -24,14 +23,13 @@ export function LessonsPage() {
   const [debouncedSearch] = useDebounce(searchInput, 300);
   const [unitId, setUnitId] = useState("all");
   const [difficulty, setDifficulty] = useState("all");
-  const [status, setStatus] = useState<string>("published");
   const [sort, setSort] = useState<LessonSort>("default");
 
   const filter: LessonFilter = {
     search: debouncedSearch.trim() || undefined,
     unitId: unitId === "all" ? undefined : unitId,
     difficulty: difficulty === "all" ? undefined : (difficulty as Difficulty),
-    status: status as LessonStatus,
+    status: "published",
     sort,
     pageSize: 100,
   };
@@ -45,7 +43,7 @@ export function LessonsPage() {
     <PageContainer className="flex flex-col gap-6 py-8">
       <PageHeader
         title="الدروس"
-        description="استعرض جميع دروس البرمجة، وابحث وصفِّ حسب الوحدة والمستوى."
+        description="استعرض دروس البرمجة والذكاء الاصطناعي، وابحث وصفِّ حسب الوحدة والمستوى."
       >
         <div className="mt-4">
           <LessonSearch value={searchInput} onChange={setSearchInput} />
@@ -55,11 +53,9 @@ export function LessonsPage() {
       <LessonFilterBar
         unitId={unitId}
         difficulty={difficulty}
-        status={status}
         sort={sort}
         onUnitChange={setUnitId}
         onDifficultyChange={setDifficulty}
-        onStatusChange={setStatus}
         onSortChange={setSort}
       />
 
