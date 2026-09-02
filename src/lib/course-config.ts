@@ -21,7 +21,7 @@ export const courseConfig = {
     slug: "engineering-cs",
     title: "الهندسة والحاسب",
   },
-  title: "برمجة — الهندسة والحاسب",
+  title: "البرمجة والذكاء الاصطناعي — الهندسة والحاسب",
 } as const;
 
 /**

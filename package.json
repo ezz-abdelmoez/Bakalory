@@ -2,7 +2,7 @@
   "name": "edu-programming-2bac",
   "version": "0.1.0",
   "private": true,
-  "description": "برمجة 2 باك — منصة تعلم البرمجة لطلاب السنة الثانية باكالوريا (Next.js + mock-first API)",
+  "description": "البرمجة والذكاء الاصطناعي — منصة تعليمية لطلاب الصف الثاني بكالوريا (Next.js + mock-first API)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useUnits } from "@/lib/api/modules/units/hooks";
-import type { Difficulty, LessonSort, LessonStatus } from "@/lib/api/contracts/lesson";
+import type { Difficulty, LessonSort } from "@/lib/api/contracts/lesson";
 import { difficultyLabels } from "@/types";
 import {
   Select,
@@ -21,34 +21,25 @@ const sortOptions: { value: LessonSort; label: string }[] = [
   { value: "difficulty", label: "حسب الصعوبة" },
 ];
 
-const statusOptions: { value: LessonStatus; label: string }[] = [
-  { value: "published", label: "المنشورة" },
-  { value: "draft", label: "المسودة" },
-];
-
 export function LessonFilterBar({
   unitId,
   difficulty,
-  status,
   sort,
   onUnitChange,
   onDifficultyChange,
-  onStatusChange,
   onSortChange,
 }: {
   unitId: string;
   difficulty: string;
-  status: string;
   sort: LessonSort;
   onUnitChange: (value: string) => void;
   onDifficultyChange: (value: string) => void;
-  onStatusChange: (value: string) => void;
   onSortChange: (value: LessonSort) => void;
 }) {
   const { data: units } = useUnits();
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <div className="flex flex-col gap-1.5">
         <Label htmlFor="unit-filter">الوحدة</Label>
         <Select value={unitId} onValueChange={onUnitChange}>
@@ -77,22 +68,6 @@ export function LessonFilterBar({
             {difficultyOptions.map((option) => (
               <SelectItem key={option} value={option}>
                 {difficultyLabels[option]}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div className="flex flex-col gap-1.5">
-        <Label htmlFor="status-filter">الحالة</Label>
-        <Select value={status} onValueChange={onStatusChange}>
-          <SelectTrigger id="status-filter" aria-label="تصفية حسب الحالة">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            {statusOptions.map((option) => (
-              <SelectItem key={option.value} value={option.value}>
-                {option.label}
               </SelectItem>
             ))}
           </SelectContent>

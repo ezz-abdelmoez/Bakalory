@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Code2, Database, Workflow, type LucideIcon } from "lucide-react";
+import {
+  Code2,
+  Database,
+  Network,
+  Palette,
+  ShieldCheck,
+  Workflow,
+  type LucideIcon,
+} from "lucide-react";
 
 import {
   getUnitForServer,
@@ -18,6 +26,9 @@ const unitIcons: Record<string, LucideIcon> = {
   Workflow,
   Code2,
   Database,
+  Network,
+  Palette,
+  ShieldCheck,
 };
 
 export async function generateStaticParams() {
@@ -80,7 +91,9 @@ export default async function UnitDetailPage({
             </h1>
             <p className="text-muted-foreground">{unit.description}</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              {unit.lessonCount} دروس • {unit.questionCount} سؤال
+              {unit.lessonCount > 0
+                ? `${unit.lessonCount} دروس منشورة • ${unit.questionCount} سؤال`
+                : "المحتوى قيد الإعداد"}
             </p>
           </div>
         </div>
@@ -91,7 +104,10 @@ export default async function UnitDetailPage({
         {unit.lessons.length > 0 ? (
           <LessonGrid lessons={unit.lessons} />
         ) : (
-          <EmptyState title="لا توجد دروس بعد" description="لم تُنشر أي دروس في هذه الوحدة حتى الآن." />
+          <EmptyState
+            title="المحتوى قيد الإعداد"
+            description="يُجهّز محتوى هذه الوحدة ومواردها واختباراتها التفاعلية حاليًا."
+          />
         )}
       </div>
     </PageContainer>

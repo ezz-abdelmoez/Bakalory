@@ -4,6 +4,8 @@ import {
   Code2,
   Database,
   Network,
+  Palette,
+  ShieldCheck,
   Workflow,
   type LucideIcon,
 } from "lucide-react";
@@ -24,6 +26,8 @@ const unitIcons: Record<string, LucideIcon> = {
   Code2,
   Database,
   Network,
+  Palette,
+  ShieldCheck,
 };
 
 const iconColorClasses: Record<string, string> = {
@@ -54,9 +58,15 @@ export function UnitCard({ unit }: { unit: UnitDto }) {
       </CardHeader>
 
       <CardContent className="flex items-center gap-4 text-sm text-muted-foreground">
-        <span>{unit.lessonCount} دروس</span>
-        <span aria-hidden="true">•</span>
-        <span>{unit.questionCount} سؤال</span>
+        {unit.lessonCount > 0 ? (
+          <>
+            <span>{unit.lessonCount} دروس منشورة</span>
+            <span aria-hidden="true">•</span>
+            <span>{unit.questionCount} سؤال</span>
+          </>
+        ) : (
+          <span>المحتوى قيد الإعداد</span>
+        )}
       </CardContent>
 
       <CardFooter className="mt-auto">

@@ -28,11 +28,10 @@ export function HeroSection() {
     return (
       <section className="flex flex-col items-center gap-4 py-16 text-center">
         <h1 className="text-3xl font-extrabold sm:text-4xl">
-          تعلم البرمجة بطريقة أسهل
+          تعلم البرمجة والذكاء الاصطناعي بطريقة أسهل
         </h1>
         <p className="max-w-2xl text-muted-foreground">
-          منصة عربية لطلاب السنة الثانية باكالوريا لتعلم الخوارزميات وPython وقواعد
-          البيانات.
+          منصة عربية لطلاب الصف الثاني بكالوريا لتعلّم البرمجة والذكاء الاصطناعي والأمن السيبراني وتطبيقات الويب.
         </p>
       </section>
     );
@@ -55,7 +54,7 @@ export function HeroSection() {
 
       <div className="flex flex-wrap items-center justify-center gap-3">
         <Button asChild size="lg">
-          <Link href="/lessons/introduction-to-algorithms">{data.primaryCta}</Link>
+          <Link href="/lessons/it-evolution-and-social-change">{data.primaryCta}</Link>
         </Button>
         <Button asChild size="lg" variant="outline">
           <Link href="/lessons">

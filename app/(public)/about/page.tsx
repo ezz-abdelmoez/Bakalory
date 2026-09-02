@@ -3,10 +3,11 @@ import {
   BookOpen,
   ClipboardCheck,
   Code2,
-  Database,
   Download,
   GraduationCap,
-  Workflow,
+  Network,
+  Palette,
+  ShieldCheck,
 } from "lucide-react";
 
 import { PageContainer } from "@/components/shared/page-container";
@@ -22,26 +23,33 @@ import {
 export const metadata: Metadata = {
   title: "حول المنصة",
   description:
-    "تعرف على منصة برمجة 2 باك: رسالتها، وحداتها الدراسية، وكيفية الاستفادة منها.",
+    "تعرف على منصة البرمجة والذكاء الاصطناعي: رسالتها، ووحدات الترم الأول، وكيفية الاستفادة منها.",
 };
 
 const units = [
   {
-    icon: Workflow,
-    title: "الخوارزميات",
+    icon: Network,
+    title: "تكنولوجيا المعلومات والمجتمع",
     description:
-      "مفهوم الخوارزمية، المخططات الانسيابية، وخوارزميات الترتيب والبحث.",
+      "تطور تكنولوجيا المعلومات، وأسس الذكاء الاصطناعي، وتطبيقاته وقضاياه الأخلاقية.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "الأمن السيبراني",
+    description:
+      "التشفير والمصادقة، وأمن الشبكات، والاستجابة للحوادث وإدارة المخاطر.",
   },
   {
     icon: Code2,
-    title: "البرمجة بلغة Python",
+    title: "تطبيقات الويب",
     description:
-      "المتغيرات، الجمل الشرطية، الحلقات التكرارية، والدوال والوحدات.",
+      "بنية تطبيقات الويب، وطرق الاتصال فيها، وأساسيات الواجهة الأمامية.",
   },
   {
-    icon: Database,
-    title: "قواعد البيانات",
-    description: "أساسيات قواعد البيانات العلائقية ولغة SQL والاستعلامات.",
+    icon: Palette,
+    title: "تصميم الويب والوسائط",
+    description:
+      "أنواع الوسائط، وتجربة المستخدم، وتقييم المواقع وتحسينها تكراريًا.",
   },
 ];
 
@@ -53,8 +61,8 @@ const steps = [
   },
   {
     icon: Download,
-    title: "2. حمّل الملفات",
-    description: "استخدم ملفات PDF والتمارين والشرائح للمراجعة والتطبيق.",
+    title: "2. عاين أو حمّل الملفات",
+    description: "عاين ملفات PDF داخل المنصة أو حمّل الشرح والتمارين والشرائح للمراجعة.",
   },
   {
     icon: ClipboardCheck,
@@ -73,22 +81,22 @@ export default function AboutPage() {
     <PageContainer className="flex flex-col gap-8 py-8">
       <PageHeader
         title="حول المنصة"
-        description="برمجة 2 باك منصة عربية مجانية لمساعدة طلاب السنة الثانية باكالوريا على تعلم البرمجة بطريقة مبسطة ومنظمة."
+        description="البرمجة والذكاء الاصطناعي منصة عربية مجانية لمساعدة طلاب الصف الثاني بكالوريا على تعلّم المنهج بطريقة مبسطة ومنظمة."
       />
 
       <section className="flex flex-col gap-3">
         <h2 className="text-xl font-bold">رسالتنا</h2>
         <p className="max-w-3xl leading-relaxed text-muted-foreground">
-          نؤمن بأن تعلم البرمجة لا يجب أن يكون معقدًا. لذلك نقدم دروسًا مبسطة
-          باللغة العربية تغطي منهج مادة البرمجة للسنة الثانية باكالوريا، مع أمثلة
-          تطبيقية وملفات قابلة للتحميل واختبارات تفاعلية تساعدك على التثبت من
-          فهمك في كل خطوة.
+          نقدم دروسًا عربية منظمة تغطي مقرر البرمجة والذكاء الاصطناعي للصف الثاني
+          بكالوريا، من تكنولوجيا المعلومات والذكاء الاصطناعي إلى الأمن السيبراني
+          وتطبيقات وتصميم الويب. وتجمع المنصة بين الشرح والأمثلة والملفات القابلة
+          للتحميل والاختبارات التفاعلية لتساعد الطالب على التعلّم والمراجعة بثقة.
         </p>
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-bold">الوحدات الدراسية</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <h2 className="text-xl font-bold">وحدات الترم الأول</h2>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {units.map((unit) => (
             <Card key={unit.title}>
               <CardHeader>

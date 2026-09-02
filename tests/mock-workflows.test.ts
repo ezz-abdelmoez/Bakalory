@@ -69,14 +69,20 @@ describe("mock workflows", () => {
   });
 
   // 2. Units -------------------------------------------------------------
-  it("returns 1 ordered unit with computed counts", async () => {
+  it("returns the four first-semester units in curriculum order", async () => {
     const units = await api.units.list();
-    expect(units).toHaveLength(1);
-    expect(units.map((unit) => unit.order)).toEqual([1]);
-    expect(units[0].slug).toBe("it-and-society");
+    expect(units).toHaveLength(4);
+    expect(units.map((unit) => unit.order)).toEqual([1, 2, 3, 4]);
+    expect(units.map((unit) => unit.slug)).toEqual([
+      "it-and-society",
+      "cybersecurity",
+      "web-applications",
+      "web-design-and-media",
+    ]);
     expect(units[0].title).toBe("تكنولوجيا المعلومات والمجتمع");
     expect(units[0].lessonCount).toBe(1);
     expect(units[0].questionCount).toBeGreaterThan(0);
+    expect(units.slice(1).every((unit) => unit.lessonCount === 0)).toBe(true);
   });
 
   // 3. Lessons list ------------------------------------------------------
@@ -103,7 +109,12 @@ describe("mock workflows", () => {
     expect(beginner.items).toHaveLength(1);
 
     const drafts = await api.lessons.list({ status: "draft", pageSize: 100 });
-    expect(drafts.items).toHaveLength(0);
+    expect(drafts.items).toHaveLength(13);
+    expect(drafts.items.map((lesson) => lesson.number)).toEqual([
+      2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+    ]);
+    expect(drafts.items.every((lesson) => lesson.questionCount === 0)).toBe(true);
+    expect(drafts.items.every((lesson) => lesson.resourceCount === 0)).toBe(true);
   });
 
   it("paginates with correct meta", async () => {
@@ -298,7 +309,7 @@ describe("mock workflows", () => {
   });
 
   // 9. Lesson navigation -------------------------------------------------
-  it("returns empty navigation for a single-lesson course", async () => {
+  it("returns empty navigation while only the first lesson is published", async () => {
     const nav = await api.lessons.navigation("it-evolution-and-social-change");
     expect(nav.previous).toBeUndefined();
     expect(nav.next).toBeUndefined();
