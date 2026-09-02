@@ -8,7 +8,7 @@
     "fileName": "تطور تكنولوجيا المعلومات والتحول الاجتماعي — شرح تفصيلي.pdf",
     "filePath": "/resources/2bac/engineering-cs/it-evolution-and-social-change/explanation/detailed-explanation.pdf",
     "mimeType": "application/pdf",
-    "size": "1.0 MB",
+    "size": "741 KB",
     "description": "ملف الشرح التفصيلي للدرس: من الحواسيب الأولى إلى الذكاء الاصطناعي والحوسبة الكمومية، مع الأمثلة والتمارين.",
     "downloadable": true,
     "viewable": true
@@ -19,11 +19,25 @@
     "title": "عرض الدرس (سلايد)",
     "type": "slides",
     "source": "upload",
-    "fileName": "تطور تكنولوجيا المعلومات والتحول الاجتماعي — سليد.pdf",
+    "fileName": "تطور تكنولوجيا المعلومات والتحول الاجتماعي — سلايدات.pdf",
     "filePath": "/resources/2bac/engineering-cs/it-evolution-and-social-change/slides/slides.pdf",
     "mimeType": "application/pdf",
-    "size": "1.4 MB",
+    "size": "1.34 MB",
     "description": "عرض تقديمي (سلايد) يلخص مراحل تطور تكنولوجيا المعلومات والتغيرات الاجتماعية والتقنيات الناشئة.",
+    "downloadable": true,
+    "viewable": true
+  },
+  {
+    "id": "r-01-3",
+    "lessonId": "lesson-01",
+    "title": "إجابات وتمارين الدرس",
+    "type": "pdf",
+    "source": "upload",
+    "fileName": "تطور تكنولوجيا المعلومات والتحول الاجتماعي — الإجابات النموذجية.pdf",
+    "filePath": "/resources/2bac/engineering-cs/it-evolution-and-social-change/answers.pdf",
+    "mimeType": "application/pdf",
+    "size": "93 KB",
+    "description": "الإجابات النموذجية لأسئلة وتمارين درس تطور تكنولوجيا المعلومات والتحول الاجتماعي.",
     "downloadable": true,
     "viewable": true
   }

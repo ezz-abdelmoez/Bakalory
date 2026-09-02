@@ -17,6 +17,14 @@ import type { ResourceDto } from "@/lib/api/contracts/lesson";
 import { resourceTypeLabels } from "@/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const resourceIcons: Record<string, LucideIcon> = {
   pdf: FileText,
@@ -47,11 +55,65 @@ function resourceHref(resource: ResourceDto): string | undefined {
   return resource.url ?? resource.filePath;
 }
 
+function isPdfResource(resource: ResourceDto, href: string | undefined): boolean {
+  if (resource.mimeType?.toLowerCase().includes("pdf")) return true;
+  return Boolean(href?.split(/[?#]/, 1)[0].toLowerCase().endsWith(".pdf"));
+}
+
+function PdfPreviewDialog({
+  resource,
+  href,
+}: {
+  resource: ResourceDto;
+  href: string;
+}) {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline" size="sm">
+          <Eye className="h-4 w-4" aria-hidden="true" />
+          معاينة PDF
+        </Button>
+      </DialogTrigger>
+
+      <DialogContent className="h-[calc(100dvh-2rem)] !max-w-5xl grid-rows-[auto_minmax(0,1fr)] !gap-0 overflow-hidden !p-0 sm:rounded-xl">
+        <DialogHeader className="gap-3 border-b px-6 py-5 pe-14 text-start">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="min-w-0">
+              <DialogTitle className="truncate">معاينة الملف</DialogTitle>
+              <DialogDescription className="mt-1 truncate">
+                {resource.title}
+              </DialogDescription>
+            </div>
+            <Button asChild size="sm" variant="outline" className="shrink-0">
+              <a href={href} download={resource.fileName}>
+                <Download className="h-4 w-4" aria-hidden="true" />
+                تحميل الملف
+              </a>
+            </Button>
+          </div>
+        </DialogHeader>
+
+        <div className="min-h-0 bg-muted">
+          <iframe
+            src={href}
+            title={`معاينة ${resource.title}`}
+            className="block h-full w-full border-0"
+          >
+            لا يدعم متصفحك معاينة ملفات PDF. يمكنك تحميل الملف بدلًا من ذلك.
+          </iframe>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
 export function ResourceItem({ resource }: { resource: ResourceDto }) {
   const Icon = resourceIcons[resource.type] ?? FileText;
   const href = resourceHref(resource);
   const isVideo = resource.type === "video";
   const isLink = resource.type === "link";
+  const isPdf = isPdfResource(resource, href);
   const youtubeEmbed = isVideo && href ? toYouTubeEmbed(href) : null;
 
   const metaParts: string[] = [resourceTypeLabels[resource.type]];
@@ -81,7 +143,7 @@ export function ResourceItem({ resource }: { resource: ResourceDto }) {
           </div>
         </div>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 flex-wrap items-center gap-2">
           {isLink && href ? (
             <Button asChild size="sm">
               <a href={href} target="_blank" rel="noopener noreferrer">
@@ -91,7 +153,11 @@ export function ResourceItem({ resource }: { resource: ResourceDto }) {
             </Button>
           ) : null}
 
-          {!isLink && resource.viewable && href ? (
+          {isPdf && resource.viewable && href ? (
+            <PdfPreviewDialog resource={resource} href={href} />
+          ) : null}
+
+          {!isLink && !isPdf && resource.viewable && href ? (
             <Button asChild variant="outline" size="sm">
               <a href={href} target="_blank" rel="noopener noreferrer">
                 {isVideo ? (
