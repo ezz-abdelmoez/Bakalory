@@ -32,8 +32,8 @@ Switching from demo data to a real API is an **environment-flag change only**
 | 3 | تطبيقات الويب | 3-1 البنية العامة لتطبيقات الويب · 3-2 طرق الاتصال في تطبيقات الويب · 3-3 أساسيات تكنولوجيا الواجهة الأمامية |
 | 4 | تصميم الويب والوسائط | 4-1 أنواع الوسائط وخصائصها · 4-2 تصميم المعلومات وتجربة المستخدم للمواقع · 4-3 أساليب تقييم المواقع الإلكترونية · 4-4 عملية التحسين التكراري للمواقع |
 
-The first lesson is published. The remaining 13 lessons are represented as
-private draft records, ready to receive their content, resources, and quiz
+The first two lessons are published. The remaining 12 lessons are represented
+as private draft records, ready to receive their content, resources, and quiz
 questions without exposing incomplete lessons to students.
 
 Files are organized under the extensible path convention:

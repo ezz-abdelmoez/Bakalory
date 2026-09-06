@@ -80,15 +80,16 @@ describe("mock workflows", () => {
       "web-design-and-media",
     ]);
     expect(units[0].title).toBe("تكنولوجيا المعلومات والمجتمع");
-    expect(units[0].lessonCount).toBe(1);
-    expect(units[0].questionCount).toBeGreaterThan(0);
+    expect(units[0].lessonCount).toBe(2);
+    expect(units[0].questionCount).toBe(18);
     expect(units.slice(1).every((unit) => unit.lessonCount === 0)).toBe(true);
   });
 
   // 3. Lessons list ------------------------------------------------------
-  it("returns 1 published lesson", async () => {
+  it("returns the 2 published lessons", async () => {
     const result = await api.lessons.list({ pageSize: 100 });
-    expect(result.meta.total).toBe(1);
+    expect(result.meta.total).toBe(2);
+    expect(result.items.map((lesson) => lesson.id)).toEqual(["lesson-01", "lesson-02"]);
     expect(result.items.every((lesson) => lesson.status === "published")).toBe(true);
   });
 
@@ -103,15 +104,16 @@ describe("mock workflows", () => {
     const byUnit = await api.lessons.list({ unitId: "unit-it-society", pageSize: 100 });
     expect(byUnit.items.map((lesson) => lesson.id).sort()).toEqual([
       "lesson-01",
+      "lesson-02",
     ]);
 
     const beginner = await api.lessons.list({ difficulty: "beginner", pageSize: 100 });
-    expect(beginner.items).toHaveLength(1);
+    expect(beginner.items).toHaveLength(2);
 
     const drafts = await api.lessons.list({ status: "draft", pageSize: 100 });
-    expect(drafts.items).toHaveLength(13);
+    expect(drafts.items).toHaveLength(12);
     expect(drafts.items.map((lesson) => lesson.number)).toEqual([
-      2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+      3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
     ]);
     expect(drafts.items.every((lesson) => lesson.questionCount === 0)).toBe(true);
     expect(drafts.items.every((lesson) => lesson.resourceCount === 0)).toBe(true);
@@ -119,8 +121,8 @@ describe("mock workflows", () => {
 
   it("paginates with correct meta", async () => {
     const page1 = await api.lessons.list({ page: 1, pageSize: 4 });
-    expect(page1.items).toHaveLength(1);
-    expect(page1.meta.total).toBe(1);
+    expect(page1.items).toHaveLength(2);
+    expect(page1.meta.total).toBe(2);
     expect(page1.meta.totalPages).toBe(1);
   });
 
@@ -132,6 +134,16 @@ describe("mock workflows", () => {
     expect(lesson.questionCount).toBe(8);
     expect(lesson.resourceCount).toBe(3); // شرح + سلايد + إجابات
     expect(lesson.content.objectives.length).toBeGreaterThan(0);
+  });
+
+  it("gets the published second lesson with its content, resources, and quiz", async () => {
+    const lesson = await api.lessons.get("how-artificial-intelligence-works");
+    expect(lesson.title).toBe("كيف يعمل الذكاء الاصطناعي");
+    expect(lesson.unitSlug).toBe("it-and-society");
+    expect(lesson.questionCount).toBe(10);
+    expect(lesson.resourceCount).toBe(3);
+    expect(lesson.content.objectives).toHaveLength(3);
+    expect(lesson.content.concepts).toHaveLength(6);
   });
 
   it("throws a 404 NOT_FOUND ApiError for an unknown lesson", async () => {
@@ -155,6 +167,17 @@ describe("mock workflows", () => {
     expect(types).toEqual(["pdf", "pdf", "slides"]);
   });
 
+  it("lists the second lesson PDFs from its lesson-specific resource folder", async () => {
+    const resources = await api.lessons.resources("how-artificial-intelligence-works");
+    expect(resources).toHaveLength(3);
+    expect(resources.map((resource) => resource.filePath)).toEqual([
+      "/resources/2bac/engineering-cs/how-artificial-intelligence-works/explanation/detailed-explanation.pdf",
+      "/resources/2bac/engineering-cs/how-artificial-intelligence-works/slides/slides.pdf",
+      "/resources/2bac/engineering-cs/how-artificial-intelligence-works/answers.pdf",
+    ]);
+    expect(resources.every((resource) => resource.mimeType === "application/pdf")).toBe(true);
+  });
+
   // 6. Quiz --------------------------------------------------------------
   it("strips correctAnswers from the quiz endpoint", async () => {
     const quiz = await api.lessons.quiz("it-evolution-and-social-change");
@@ -162,6 +185,13 @@ describe("mock workflows", () => {
     for (const question of quiz) {
       expect(question).not.toHaveProperty("correctAnswers");
     }
+  });
+
+  it("serves the second lesson's 10 questions without answer keys", async () => {
+    const quiz = await api.lessons.quiz("how-artificial-intelligence-works");
+    expect(quiz).toHaveLength(10);
+    expect(quiz.every((question) => question.type === "single-choice")).toBe(true);
+    expect(quiz.every((question) => !("correctAnswers" in question))).toBe(true);
   });
 
   it("grades all three question types correctly with the pure engine", () => {
@@ -254,6 +284,25 @@ describe("mock workflows", () => {
     expect(result.correctCount).toBe(8);
   });
 
+  it("grades the complete second-lesson quiz using its uploaded answer key", async () => {
+    const questions = await api.lessons.questions("how-artificial-intelligence-works");
+    const answers: Record<string, string[]> = {};
+    for (const question of questions) {
+      answers[question.id] = [...question.correctAnswers];
+    }
+
+    const result = await api.quiz.grade("how-artificial-intelligence-works", {
+      lessonId: "lesson-02",
+      answers,
+      startedAt: new Date().toISOString(),
+    });
+
+    expect(result.percent).toBe(100);
+    expect(result.score).toBe(10);
+    expect(result.total).toBe(10);
+    expect(result.correctCount).toBe(10);
+  });
+
   // 7. Validation --------------------------------------------------------
   it("rejects malformed grade input with INVALID_API_REQUEST (422)", async () => {
     const badInput = {
@@ -309,9 +358,13 @@ describe("mock workflows", () => {
   });
 
   // 9. Lesson navigation -------------------------------------------------
-  it("returns empty navigation while only the first lesson is published", async () => {
-    const nav = await api.lessons.navigation("it-evolution-and-social-change");
-    expect(nav.previous).toBeUndefined();
-    expect(nav.next).toBeUndefined();
+  it("navigates between the two published lessons", async () => {
+    const first = await api.lessons.navigation("it-evolution-and-social-change");
+    expect(first.previous).toBeUndefined();
+    expect(first.next?.slug).toBe("how-artificial-intelligence-works");
+
+    const second = await api.lessons.navigation("how-artificial-intelligence-works");
+    expect(second.previous?.slug).toBe("it-evolution-and-social-change");
+    expect(second.next).toBeUndefined();
   });
 });
