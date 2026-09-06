@@ -40,5 +40,47 @@
     "description": "الإجابات النموذجية لأسئلة وتمارين درس تطور تكنولوجيا المعلومات والتحول الاجتماعي.",
     "downloadable": true,
     "viewable": true
+  },
+  {
+    "id": "r-02-1",
+    "lessonId": "lesson-02",
+    "title": "ملف الشرح التفصيلي",
+    "type": "pdf",
+    "source": "upload",
+    "fileName": "كيف يعمل الذكاء الاصطناعي — شرح تفصيلي.pdf",
+    "filePath": "/resources/2bac/engineering-cs/how-artificial-intelligence-works/explanation/detailed-explanation.pdf",
+    "mimeType": "application/pdf",
+    "size": "479 KB",
+    "description": "ملف الشرح التفصيلي للدرس: من التعلّم الآلي إلى التعلّم العميق والذكاء الاصطناعي التوليدي.",
+    "downloadable": true,
+    "viewable": true
+  },
+  {
+    "id": "r-02-2",
+    "lessonId": "lesson-02",
+    "title": "عرض الدرس (سلايدات)",
+    "type": "slides",
+    "source": "upload",
+    "fileName": "كيف يعمل الذكاء الاصطناعي — سلايدات.pdf",
+    "filePath": "/resources/2bac/engineering-cs/how-artificial-intelligence-works/slides/slides.pdf",
+    "mimeType": "application/pdf",
+    "size": "973 KB",
+    "description": "عرض تقديمي يلخّص مفاهيم الذكاء الاصطناعي والتعلّم الآلي والتعلّم العميق والهلوسة.",
+    "downloadable": true,
+    "viewable": true
+  },
+  {
+    "id": "r-02-3",
+    "lessonId": "lesson-02",
+    "title": "إجابات وتمارين الدرس",
+    "type": "pdf",
+    "source": "upload",
+    "fileName": "كيف يعمل الذكاء الاصطناعي — الإجابات النموذجية.pdf",
+    "filePath": "/resources/2bac/engineering-cs/how-artificial-intelligence-works/answers.pdf",
+    "mimeType": "application/pdf",
+    "size": "3.78 MB",
+    "description": "الإجابات النموذجية لأسئلة وتدريبات درس كيف يعمل الذكاء الاصطناعي.",
+    "downloadable": true,
+    "viewable": true
   }
 ]
